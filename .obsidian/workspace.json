@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Video Idea.md",
+                "file": "Enabling users to access their own data.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Video Idea"
+              "title": "Enabling users to access their own data"
             }
           }
         ]
@@ -188,14 +188,14 @@
   "active": "c30e2a352bfbe1e0",
   "lastOpenFiles": [
     "How I post from obsidian widget.md",
-    "Enabling users to access their own data.md",
     "Subtitles (srt).md",
+    "Templates/Video Idea.md",
+    "Enabling users to access their own data.md",
     "Building a Svelte Framework from Scratch.md",
     "Untitled.md",
     "Hello from mobile.md",
     "Hello Woooorld!.md",
     "Here's a test Sync.md",
-    "Templates/Video Idea.md",
     "Hello World.md",
     "Obsidian as a Developer Knowledge Base.md",
     "Templates",
