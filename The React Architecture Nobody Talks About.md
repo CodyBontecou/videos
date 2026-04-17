@@ -2,6 +2,7 @@
 title: The React Architecture Nobody Talks About
 tags: [react, architecture, patterns, typescript]
 date: 2024-02-03
+id: 7972013a-6bcc-48b9-94b8-cff65ff02fb9
 ---
 
 Everyone shows you folder structure. Nobody shows you the decision-making behind it. This video is about how large React apps actually fail — not from wrong folder names, but from leaked state, tangled data flow, and components that know too much.

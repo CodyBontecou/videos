@@ -2,6 +2,7 @@
 title: Why I Switched from Webpack to Bun
 tags: [bun, bundler, performance, devtools]
 date: 2024-03-01
+id: 6dc57c5e-ae6b-466a-b36d-64c7e09da330
 ---
 
 After six years of Webpack configs, I migrated a 200k-line TypeScript monorepo to Bun in a week. Here's what was better, what was worse, and the one thing that almost made me revert.

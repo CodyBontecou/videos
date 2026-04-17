@@ -2,6 +2,7 @@
 title: Building a Svelte Framework from Scratch
 tags: [svelte, framework, javascript, compiler]
 date: 2024-01-12
+id: 64473bbb-0806-4f22-90b7-81c6aaa9a403
 ---
 
 What if we stripped Svelte down to first principles and rebuilt it ourselves? This video walks through designing a minimal reactive compiler that transforms declarative component syntax into raw DOM operations — no virtual DOM, no diffing, just surgical updates.

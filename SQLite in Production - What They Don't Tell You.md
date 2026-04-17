@@ -2,6 +2,7 @@
 title: SQLite in Production — What They Don't Tell You
 tags: [sqlite, database, backend, performance]
 date: 2024-03-28
+id: c52fb617-28a9-4ab6-9e30-b191e848fdc4
 ---
 
 SQLite is not a toy database. It handles millions of reads per second, has ACID transactions, and ships in a single file. But there are real traps when you move from "localhost hobby project" to "this needs to not go down."

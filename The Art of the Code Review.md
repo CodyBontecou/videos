@@ -2,6 +2,7 @@
 title: The Art of the Code Review
 tags: [engineering, teamwork, process, culture]
 date: 2024-04-05
+id: cd59da21-41d9-4071-8bd1-b8e63e7c18c1
 ---
 
 Most code reviews check syntax. Good code reviews transfer architecture. This video is about the difference — what makes a review a learning moment vs. a gatekeeping moment, and how to give feedback that actually sticks.
