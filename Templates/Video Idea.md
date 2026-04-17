@@ -5,4 +5,3 @@ date: <% tp.date.now("YYYY-MM-DD") %>
 made:
 video_url:
 ---
-<% tp.file.content %>
