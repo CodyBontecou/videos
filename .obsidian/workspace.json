@@ -11,10 +11,14 @@
             "id": "c30e2a352bfbe1e0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Subtitles (srt).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Subtitles (srt)"
             }
           }
         ]
@@ -181,14 +185,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ac9244aca3dc782c",
+  "active": "c30e2a352bfbe1e0",
   "lastOpenFiles": [
-    "Obsidian-Basis-Requirement.md",
     "Markdown-Workflow.md",
+    "Subtitles (srt).md",
+    "Forgot-Sevijay.md",
+    "Try-Again.md",
+    "Third-time's-a-charm.md",
+    "How I post from obsidian widget.md",
+    "Obsidian-Basis-Requirement.md",
     "Templates/Video Idea.md",
     "This where I’ll be posting video ideas.md",
-    "Subtitles (srt).md",
-    "How I post from obsidian widget.md",
     "Enabling users to access their own data.md",
     "Building a Svelte Framework from Scratch.md",
     "Untitled.md",
