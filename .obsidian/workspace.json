@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Subtitles (srt).md",
+                "file": "Templates/Video Idea.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Subtitles (srt)"
+              "title": "Video Idea"
             }
           }
         ]
@@ -187,9 +187,9 @@
   },
   "active": "c30e2a352bfbe1e0",
   "lastOpenFiles": [
-    "Subtitles (srt).md",
     "How I post from obsidian widget.md",
     "Enabling users to access their own data.md",
+    "Subtitles (srt).md",
     "Building a Svelte Framework from Scratch.md",
     "Untitled.md",
     "Hello from mobile.md",
