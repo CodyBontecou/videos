@@ -1,5 +1,5 @@
 ---
-title: Here's a test Sync
+title: Here's a test Sync from mobile
 tags:
   - bun
   - bundler
@@ -7,4 +7,4 @@ tags:
   - devtools
 date: 2024-03-01
 ---
-Lets see if it auto-deploys
+Lets see if it auto-deploys!
