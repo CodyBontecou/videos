@@ -1,6 +1,6 @@
 ---
-title: {{title}}
+id: <% crypto.randomUUID() %>
 tags: []
-date: {{date:YYYY-MM-DD}}
+date: <% tp.date.now("YYYY-MM-DD") %>
 ---
 

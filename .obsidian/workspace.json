@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Here's a test Sync.md",
+                "file": "Templates/Video Idea.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Here's a test Sync"
+              "title": "Video Idea"
+            }
+          },
+          {
+            "id": "e5b217914decb56c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/Video Idea.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Video Idea"
+            }
+          },
+          {
+            "id": "c30e2a352bfbe1e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hello Woooorld!.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hello Woooorld!"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -181,20 +210,23 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "738e8434ed91490a",
+  "active": "c30e2a352bfbe1e0",
   "lastOpenFiles": [
     "Templates/Video Idea.md",
+    "Hello Woooorld!.md",
+    "Hello World.md",
+    "Building a Svelte Framework from Scratch.md",
+    "Obsidian as a Developer Knowledge Base.md",
+    "Here's a test Sync.md",
     "Templates",
     "Why I Switched from Webpack to Bun.md",
-    "Here's a test Sync.md",
     "Welcome.md",
     "TypeScript Tricks That Changed My Workflow.md",
     "Cloudflare Workers Zero to Production.md",
-    "Building a Svelte Framework from Scratch.md",
-    "Obsidian as a Developer Knowledge Base.md",
     "The Art of the Code Review.md",
     "SQLite in Production - What They Don't Tell You.md",
     "The React Architecture Nobody Talks About.md"
