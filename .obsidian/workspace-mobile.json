@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mobile-Phone-Usage-Shift.md",
+                "file": "Checking-in-from-Live-Activity-Banner.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mobile-Phone-Usage-Shift"
+              "title": "Checking-in-from-Live-Activity-Banner"
             }
           }
         ]
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Mobile-Phone-Usage-Shift.md",
+            "file": "Checking-in-from-Live-Activity-Banner.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -170,18 +170,20 @@
   },
   "active": "e2914e3cdb03117a",
   "lastOpenFiles": [
+    "Fun-Project-Idea.md",
+    "Mobile-Phone-Usage-Shift.md",
+    "Subtitles (srt).md",
+    "Checking-in-from-Live-Activity-Banner.md",
     "Data-Access.md",
     "Data-Access-2.md",
     "Data-Access-Three.md",
     "Recording-Test.md",
-    "Mobile-Phone-Usage-Shift.md",
     "Making-Money-While-Programming-in-My-Hammock.md",
     "How I post from obsidian widget.md",
     "Face-ID-Demonstration.md",
     "Enabling users to access their own data.md",
     "Building-My-Own-Gumroad-Alternative.md",
     "Creating-a-Website-from-Audio-Notes.md",
-    "Subtitles (srt).md",
     "Templates/Video Idea.md",
     "Exploring-Possibilities.md",
     "Obsidian-File-Creation-Error.md",
@@ -195,8 +197,6 @@
     "Tech-Gadgets-for-Travel.md",
     "Tech-Gear-for-Travel.txt",
     "Recording-Tech-on-the-Move.md",
-    "Tech-and-Bag-Adventures-Video-Idea.md",
-    "voxboard-2026-04-17-114429-ce3cc494.md",
     "/Templates",
     "Templates"
   ]

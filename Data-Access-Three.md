@@ -1,6 +1,8 @@
 ---
 id: dcf4db97-55ea-4a48-8c1f-a19e9e00ec7e
-tags: ["data", "access", "3"]
+tags:
+  - data
+  - access
 date: 2026-04-17
 made:
 video_url:
