@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Making-Money-While-Programming-in-My-Hammock.md",
+                "file": "Mobile-Phone-Usage-Shift.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Making-Money-While-Programming-in-My-Hammock"
+              "title": "Mobile-Phone-Usage-Shift"
             }
           }
         ]
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Making-Money-While-Programming-in-My-Hammock.md",
+            "file": "Mobile-Phone-Usage-Shift.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -170,8 +170,9 @@
   },
   "active": "e2914e3cdb03117a",
   "lastOpenFiles": [
-    "How I post from obsidian widget.md",
     "Making-Money-While-Programming-in-My-Hammock.md",
+    "Mobile-Phone-Usage-Shift.md",
+    "How I post from obsidian widget.md",
     "Face-ID-Demonstration.md",
     "Enabling users to access their own data.md",
     "Building-My-Own-Gumroad-Alternative.md",
@@ -197,7 +198,6 @@
     "/Templates",
     "/Subtitles (srt).md",
     "/How I post from obsidian widget.md",
-    "/Enabling users to access their own data.md",
     "Templates"
   ]
 }
