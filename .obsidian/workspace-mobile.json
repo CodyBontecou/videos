@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "How I post from obsidian widget.md",
+                "file": "Making-Money-While-Programming-in-My-Hammock.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How I post from obsidian widget"
+              "title": "Making-Money-While-Programming-in-My-Hammock"
             }
           }
         ]
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "How I post from obsidian widget.md",
+            "file": "Making-Money-While-Programming-in-My-Hammock.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -170,6 +170,8 @@
   },
   "active": "e2914e3cdb03117a",
   "lastOpenFiles": [
+    "How I post from obsidian widget.md",
+    "Making-Money-While-Programming-in-My-Hammock.md",
     "Face-ID-Demonstration.md",
     "Enabling users to access their own data.md",
     "Building-My-Own-Gumroad-Alternative.md",
@@ -177,7 +179,6 @@
     "Subtitles (srt).md",
     "Templates/Video Idea.md",
     "Exploring-Possibilities.md",
-    "How I post from obsidian widget.md",
     "Obsidian-File-Creation-Error.md",
     "Reflection-on-Obsidian-Workflow.md",
     "Third-time's-a-charm.md",
@@ -197,7 +198,6 @@
     "/Subtitles (srt).md",
     "/How I post from obsidian widget.md",
     "/Enabling users to access their own data.md",
-    "Hello from mobile.md",
     "Templates"
   ]
 }
