@@ -11,10 +11,14 @@
             "id": "c30e2a352bfbe1e0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Subtitles (srt).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Subtitles (srt)"
             }
           }
         ]
@@ -183,12 +187,15 @@
   },
   "active": "c30e2a352bfbe1e0",
   "lastOpenFiles": [
+    "How I post from obsidian widget.md",
+    "Templates/Video Idea.md",
+    "Subtitles (srt).md",
+    "Enabling users to access their own data.md",
     "Building a Svelte Framework from Scratch.md",
     "Untitled.md",
     "Hello from mobile.md",
     "Hello Woooorld!.md",
     "Here's a test Sync.md",
-    "Templates/Video Idea.md",
     "Hello World.md",
     "Obsidian as a Developer Knowledge Base.md",
     "Templates",

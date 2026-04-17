@@ -1,3 +1,18 @@
+---
+id: 7559e644-4091-4e9f-ad25-80bfb42f4207
+tags:
+  - obsidian
+  - workflow
+  - tutorial
+  - cloudflare
+  - git-sync
+  - series
+  - claude-code
+date: 2026-04-17
+made: true
+video_url:
+---
+
 It’d be cool to build a website around my video ideas and have users upvote ones they are interested in.
 
 This would be the video - using the obsidian widget on my phone to generate a note and have that note git sync to GitHub and auto deploy to a live site.
