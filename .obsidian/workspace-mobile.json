@@ -169,8 +169,9 @@
   },
   "active": "e2914e3cdb03117a",
   "lastOpenFiles": [
-    "Try-Again.md",
+    "conflict-files-obsidian-git.md",
     "Third-time's-a-charm.md",
+    "Try-Again.md",
     "Forgot-Sevijay.md",
     "Templates/Video Idea.md",
     "Markdown-Workflow.md",
@@ -196,7 +197,6 @@
     "/TypeScript Tricks That Changed My Workflow.md",
     "/The React Architecture Nobody Talks About.md",
     "/The Art of the Code Review.md",
-    "/SQLite in Production - What They Don't Tell You.md",
-    "/Obsidian as a Developer Knowledge Base.md"
+    "/SQLite in Production - What They Don't Tell You.md"
   ]
 }
