@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "Here's a test Sync"
             }
+          },
+          {
+            "id": "ffe601f6e64e352e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "49cbe5e820f836c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hello from mobile.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hello from mobile"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -163,9 +192,29 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "e2914e3cdb03117a",
-  "lastOpenFiles": []
+  "active": "49cbe5e820f836c8",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "Hello from mobile.md",
+    "Here's a test Sync.md",
+    "Hello Woooorld!.md",
+    "Templates/Video Idea.md",
+    "Templates",
+    "/Why I Switched from Webpack to Bun.md",
+    "/TypeScript Tricks That Changed My Workflow.md",
+    "/The React Architecture Nobody Talks About.md",
+    "/The Art of the Code Review.md",
+    "/Templates/Video Idea.md",
+    "/SQLite in Production - What They Don't Tell You.md",
+    "/Obsidian as a Developer Knowledge Base.md",
+    "/Here's a test Sync.md",
+    "/Hello Woooorld!.md",
+    "/Cloudflare Workers Zero to Production.md",
+    "/Building a Svelte Framework from Scratch.md",
+    "/Templates"
+  ]
 }
