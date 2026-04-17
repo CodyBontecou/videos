@@ -9,6 +9,7 @@ tags:
   - time-md
 date: 2026-04-17
 made:
+video_url:
 ---
 
 I want to do a face video discussing my philosophy about my goals enabling users to have power over their own data.

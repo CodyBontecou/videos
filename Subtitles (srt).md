@@ -8,6 +8,7 @@ tags:
   - automation
 date: 2026-04-17
 made:
+video_url:
 ---
 
 Update YouTube video uploaded to generate srt files for multiple languages.

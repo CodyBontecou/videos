@@ -10,6 +10,7 @@ tags:
   - claude-code
 date: 2026-04-17
 made: true
+video_url:
 ---
 
 It’d be cool to build a website around my video ideas and have users upvote ones they are interested in.
