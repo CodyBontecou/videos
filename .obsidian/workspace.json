@@ -11,14 +11,10 @@
             "id": "c30e2a352bfbe1e0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hello Woooorld!.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Hello Woooorld!"
+              "title": "New tab"
             }
           }
         ]
@@ -187,12 +183,12 @@
   },
   "active": "c30e2a352bfbe1e0",
   "lastOpenFiles": [
-    "Templates/Video Idea.md",
     "Hello Woooorld!.md",
+    "Here's a test Sync.md",
+    "Templates/Video Idea.md",
     "Hello World.md",
     "Building a Svelte Framework from Scratch.md",
     "Obsidian as a Developer Knowledge Base.md",
-    "Here's a test Sync.md",
     "Templates",
     "Why I Switched from Webpack to Bun.md",
     "Welcome.md",
