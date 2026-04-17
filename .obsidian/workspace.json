@@ -11,14 +11,10 @@
             "id": "c30e2a352bfbe1e0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Templates/Video Idea.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Video Idea"
+              "title": "New tab"
             }
           }
         ]
@@ -185,10 +181,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c30e2a352bfbe1e0",
+  "active": "ac9244aca3dc782c",
   "lastOpenFiles": [
-    "This where I’ll be posting video ideas.md",
+    "Obsidian-Basis-Requirement.md",
+    "Markdown-Workflow.md",
     "Templates/Video Idea.md",
+    "This where I’ll be posting video ideas.md",
     "Subtitles (srt).md",
     "How I post from obsidian widget.md",
     "Enabling users to access their own data.md",
