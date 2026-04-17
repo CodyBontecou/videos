@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Building-My-Own-Gumroad-Alternative.md",
+                "file": "How I post from obsidian widget.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Building-My-Own-Gumroad-Alternative"
+              "title": "How I post from obsidian widget"
             }
           }
         ]
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Building-My-Own-Gumroad-Alternative.md",
+            "file": "How I post from obsidian widget.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -171,8 +171,8 @@
   "active": "e2914e3cdb03117a",
   "lastOpenFiles": [
     "Face-ID-Demonstration.md",
-    "Building-My-Own-Gumroad-Alternative.md",
     "Enabling users to access their own data.md",
+    "Building-My-Own-Gumroad-Alternative.md",
     "Creating-a-Website-from-Audio-Notes.md",
     "Subtitles (srt).md",
     "Templates/Video Idea.md",
