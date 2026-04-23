@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Extract video editor.md",
+                "file": "Templates/Video Idea.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Extract video editor"
+              "title": "Video Idea"
             }
           }
         ]
@@ -187,9 +187,9 @@
   },
   "active": "c30e2a352bfbe1e0",
   "lastOpenFiles": [
-    "Test.md",
-    "Extract video editor.md",
     "Test-renamed.md",
+    "Extract video editor.md",
+    "Test.md",
     "test.md",
     "How I post from obsidian widget.md",
     "Subtitles (srt).md",
