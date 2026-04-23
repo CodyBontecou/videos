@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Test.md",
+                "file": "Test-renamed.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Test"
+              "title": "Test-renamed"
             }
           }
         ],
@@ -127,7 +127,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Test.md",
+            "file": "Test-renamed.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -186,8 +186,8 @@
   "active": "1cd8ade29dcf0b2c",
   "lastOpenFiles": [
     "Templates/Video Idea.md",
-    "Test.md",
-    "Test.md",
+    "Test-renamed.md",
+    "Test-renamed.md",
     "Extract video editor.md",
     "/Templates/Video Idea.md",
     "/Templates",
