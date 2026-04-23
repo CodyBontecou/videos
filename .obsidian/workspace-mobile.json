@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "67f9b4c49df4189e",
+            "id": "1cd8ade29dcf0b2c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,12 +183,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "67f9b4c49df4189e",
+  "active": "1cd8ade29dcf0b2c",
   "lastOpenFiles": [
     "Templates/Video Idea.md",
     "Test.md",
-    "Extract video editor.md",
     "Test.md",
+    "Extract video editor.md",
     "/Templates/Video Idea.md",
     "/Templates",
     "/Mobile-Phone-Usage-Shift.md",
