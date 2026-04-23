@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Test-rename.md",
+                "file": "Test-renamed.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Test-rename"
+              "title": "Test-renamed"
             }
           }
         ],
@@ -186,9 +186,9 @@
   "active": "67f9b4c49df4189e",
   "lastOpenFiles": [
     "Templates/Video Idea.md",
-    "Test-rename.md",
+    "Test-renamed.md",
     "Extract video editor.md",
-    "Test-rename.md",
+    "Test-renamed.md",
     "/Templates/Video Idea.md",
     "/Templates",
     "/Mobile-Phone-Usage-Shift.md",
