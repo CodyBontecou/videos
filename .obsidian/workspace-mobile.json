@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Test-renamed.md",
+                "file": "Test-rename-in-obsidian-sync.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Test-renamed"
+              "title": "Test-rename-in-obsidian-sync"
             }
           }
         ],
@@ -127,7 +127,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Test-renamed.md",
+            "file": "Test-rename-in-obsidian-sync.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -186,8 +186,8 @@
   "active": "1cd8ade29dcf0b2c",
   "lastOpenFiles": [
     "Templates/Video Idea.md",
-    "Test-renamed.md",
-    "Test-renamed.md",
+    "Test-rename-in-obsidian-sync.md",
+    "Test-rename-in-obsidian-sync.md",
     "Extract video editor.md",
     "/Templates/Video Idea.md",
     "/Templates",
