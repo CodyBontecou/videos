@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Subtitles (srt).md",
+                "file": "Extract video editor.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Subtitles (srt)"
+              "title": "Extract video editor"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 234.5
   },
   "right": {
     "id": "3d949c2fb5bc65c9",
@@ -187,32 +187,32 @@
   },
   "active": "c30e2a352bfbe1e0",
   "lastOpenFiles": [
-    "Recording-Test.md",
+    "Test.md",
+    "Test-renamed.md",
+    "Extract video editor.md",
+    "test.md",
+    "How I post from obsidian widget.md",
+    "Subtitles (srt).md",
+    "Building-My-Own-Gumroad-Alternative.md",
     "Mobile-Phone-Usage-Shift.md",
     "Making-Money-While-Programming-in-My-Hammock.md",
+    "Recording-Stopper-App.md",
+    "Enabling users to access their own data.md",
+    "Checking-in-from-Live-Activity-Banner.md",
     "Fun-Project-Idea.md",
+    "Recording-Test.md",
     "Data-Access.md",
     "Data-Access-Three.md",
     "Data-Access-2.md",
-    "Checking-in-from-Live-Activity-Banner.md",
-    "Building-My-Own-Gumroad-Alternative.md",
     "Face-ID-Demonstration.md",
-    "Subtitles (srt).md",
     "Creating-a-Website-from-Audio-Notes.md",
     "conflict-files-obsidian-git.md",
     "Try-Again.md",
     "Markdown-Workflow.md",
     "Forgot-Sevijay.md",
     "Third-time's-a-charm.md",
-    "How I post from obsidian widget.md",
     "Obsidian-Basis-Requirement.md",
     "Templates/Video Idea.md",
-    "This where I’ll be posting video ideas.md",
-    "Enabling users to access their own data.md",
-    "Building a Svelte Framework from Scratch.md",
-    "Untitled.md",
-    "Hello from mobile.md",
-    "Hello Woooorld!.md",
     "Templates"
   ]
 }

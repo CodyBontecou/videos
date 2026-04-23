@@ -12,7 +12,6 @@ date: 2026-04-17
 made: true
 video_url: https://youtu.be/xPNWMxleHMo
 ---
-
 It’d be cool to build a website around my video ideas and have users upvote ones they are interested in.
 
 This would be the video - using the obsidian widget on my phone to generate a note and have that note git sync to GitHub and auto deploy to a live site.

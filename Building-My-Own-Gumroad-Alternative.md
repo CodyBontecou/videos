@@ -5,5 +5,4 @@ date: 2026-04-17
 made:
 video_url:
 ---
-
 A video about why I built my own Gumroad alternative and the benefits of moving off Gumroad as well as distributing macOS apps off of the app.
