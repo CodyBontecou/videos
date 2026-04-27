@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "일기.md",
+                "file": "New 한한.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "일기"
+              "title": "New 한한"
             }
           }
         ],
@@ -203,6 +203,8 @@
   "active": "1db29d208f442217",
   "lastOpenFiles": [
     "노트.md",
+    "New 한한.md",
+    "메모.md",
     "일기.md",
     "Test-renamed.md",
     "Test-rename-in-obsidian-sync.md",
@@ -226,8 +228,6 @@
     "Data-Access-Three.md",
     "Data-Access-2.md",
     "Face-ID-Demonstration.md",
-    "Creating-a-Website-from-Audio-Notes.md",
-    "Try-Again.md",
     "Templates"
   ]
 }
