@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "New 한.md",
+                "file": "New 한한!.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "New 한"
+              "title": "New 한한!"
             }
           }
         ]
@@ -188,7 +188,7 @@
   "active": "1db29d208f442217",
   "lastOpenFiles": [
     "New 한한.md",
-    "New 한.md",
+    "New 한한!.md",
     "New 한한한.md",
     "노트.md",
     "메모.md",
