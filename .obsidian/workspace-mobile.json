@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Video Idea.md",
+                "file": "New 한한.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Video Idea"
-            }
-          },
-          {
-            "id": "8a17120efa71c868",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "New 한글.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "New 한글"
+              "title": "New 한한"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,14 +168,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8a17120efa71c868",
+  "active": "e2914e3cdb03117a",
   "lastOpenFiles": [
+    "Templates/Video Idea.md",
+    "New 한한.md",
+    "New 한한.md",
+    "New 한.md",
     "New file.md",
-    "New 한글.md",
     "노트.md",
     "Clippings/Photo Diary of a Whale Hunt.md",
     "Clippings",
-    "Templates/Video Idea.md",
     "Test-rename-in-obsidian-sync.md",
     "Extract video editor.md",
     "/Templates/Video Idea.md",
@@ -211,8 +198,6 @@
     "How I post from obsidian widget.md",
     "Face-ID-Demonstration.md",
     "Enabling users to access their own data.md",
-    "Building-My-Own-Gumroad-Alternative.md",
-    "Creating-a-Website-from-Audio-Notes.md",
     "Tech-Gear-for-Travel.txt",
     "Templates"
   ]
