@@ -1,0 +1,24 @@
+{
+  "pluginList": [
+    "CodyBontecou/obsidian-iso-me-maps"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "CodyBontecou/obsidian-iso-me-maps",
+      "version": "latest"
+    }
+  ],
+  "themesList": [],
+  "updateAtStartup": true,
+  "updateThemesAtStartup": true,
+  "enableAfterInstall": true,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": true,
+  "globalTokenName": "",
+  "personalAccessToken": "",
+  "selectLatestPluginVersionByDefault": false,
+  "allowIncompatiblePlugins": false
+}
