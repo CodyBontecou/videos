@@ -1,0 +1,44 @@
+{
+  "exportDate" : "2026-05-01T23:08:03.024Z",
+  "visits" : [
+    {
+      "address" : "Carretera el Coqui, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-29T00:16:49.000Z",
+      "latitude" : 18.32746064992239,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.22066050820118
+    },
+    {
+      "address" : "PR-115, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-29T00:04:20.956Z",
+      "latitude" : 18.32721631786296,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.24564740615648
+    },
+    {
+      "address" : "301–399 Avenida de la Pradera, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-29T00:04:20.956Z",
+      "departedAt" : "2026-04-29T00:10:46.784Z",
+      "durationMinutes" : 6.430477390686671,
+      "latitude" : 18.32787639047574,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.24428515561334
+    },
+    {
+      "address" : "Calle Marginal, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-28T23:15:03.273Z",
+      "latitude" : 18.321086187750893,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.24200193955086
+    },
+    {
+      "address" : "Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-28T23:15:03.273Z",
+      "departedAt" : "2026-04-29T00:03:13.014Z",
+      "durationMinutes" : 48.1623471001784,
+      "latitude" : 18.320678016109536,
+      "locationName" : "00677",
+      "longitude" : -67.2418324719959
+    }
+  ]
+}

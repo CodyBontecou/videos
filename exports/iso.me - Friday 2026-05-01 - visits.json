@@ -1,0 +1,44 @@
+{
+  "exportDate" : "2026-05-01T23:08:03.024Z",
+  "visits" : [
+    {
+      "address" : "29–35 Carretera el Coqui, Rincón, PR, 00677",
+      "arrivedAt" : "2026-05-01T20:36:32.829Z",
+      "latitude" : 18.327576967100132,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.2211030732704
+    },
+    {
+      "address" : "Rincón, PR, 00677",
+      "arrivedAt" : "2026-05-01T20:08:36.250Z",
+      "latitude" : 18.33390530935926,
+      "locationName" : "Rincón Plaza",
+      "longitude" : -67.2496332729778
+    },
+    {
+      "address" : "Rincón, PR, 00677",
+      "arrivedAt" : "2026-05-01T20:08:36.250Z",
+      "departedAt" : "2026-05-01T20:27:42.952Z",
+      "durationMinutes" : 19.111692118644715,
+      "latitude" : 18.333865249526106,
+      "locationName" : "Rincón Plaza",
+      "longitude" : -67.24980692424235
+    },
+    {
+      "address" : "Carretera el Coqui, Rincón, PR, 00677",
+      "arrivedAt" : "2026-05-01T15:22:14.379Z",
+      "latitude" : 18.327304036496106,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.22059602151656
+    },
+    {
+      "address" : "Carretera el Coqui, Rincón, PR, 00677",
+      "arrivedAt" : "2026-05-01T15:22:14.379Z",
+      "departedAt" : "2026-05-01T19:43:19.507Z",
+      "durationMinutes" : 261.08547781904537,
+      "latitude" : 18.327513487198548,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.22077469692768
+    }
+  ]
+}

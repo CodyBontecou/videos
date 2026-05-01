@@ -4682,7 +4682,7 @@ var require_leaflet_src = __commonJS({
           return stamp(layer);
         }
       });
-      var layerGroup = function(layers2, options) {
+      var layerGroup2 = function(layers2, options) {
         return new LayerGroup(layers2, options);
       };
       var FeatureGroup = LayerGroup.extend({
@@ -9552,7 +9552,7 @@ var require_leaflet_src = __commonJS({
       exports2.imageOverlay = imageOverlay;
       exports2.latLng = toLatLng;
       exports2.latLngBounds = toLatLngBounds;
-      exports2.layerGroup = layerGroup;
+      exports2.layerGroup = layerGroup2;
       exports2.map = createMap;
       exports2.marker = marker;
       exports2.point = toPoint;
@@ -9588,7 +9588,13 @@ module.exports = __toCommonJS(main_exports);
 var import_obsidian4 = require("obsidian");
 
 // src/parser.ts
-var BOOL_KEYS = /* @__PURE__ */ new Set(["show_visits", "show_routes", "show_heatmap", "show_outliers"]);
+var BOOL_KEYS = /* @__PURE__ */ new Set([
+  "show_visits",
+  "show_routes",
+  "show_heatmap",
+  "show_outliers",
+  "interactive"
+]);
 var NUMBER_KEYS = /* @__PURE__ */ new Set(["zoom", "height"]);
 function parseCenter(value) {
   const m = value.match(/^\[\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\]$/);
@@ -9604,15 +9610,46 @@ function parseBool(value) {
   if (v === "false" || v === "no" || v === "off" || v === "0") return false;
   return void 0;
 }
+function unquote(value) {
+  return value.replace(/^["'](.*)["']$/, "$1");
+}
+function splitListValue(value) {
+  let inner = value.trim();
+  if (inner.startsWith("[") && inner.endsWith("]")) {
+    inner = inner.slice(1, -1);
+  }
+  return inner.split(",").map((s) => unquote(s.trim())).filter((s) => s.length > 0);
+}
 function parseBlockConfig(source) {
   const cfg = {};
-  for (const rawLine of source.split(/\r?\n/)) {
+  const lines = source.split(/\r?\n/);
+  let i = 0;
+  while (i < lines.length) {
+    const rawLine = lines[i];
     const line = rawLine.trim();
+    i++;
     if (!line || line.startsWith("#")) continue;
-    const m = line.match(/^([a-z_-]+)\s*:\s*(.+)$/i);
+    const m = line.match(/^([a-z_-]+)\s*:\s*(.*)$/i);
     if (!m) continue;
     const key = m[1].toLowerCase();
-    const value = m[2].trim().replace(/^["'](.*)["']$/, "$1");
+    const rawValue = m[2].trim();
+    const value = unquote(rawValue);
+    if (key === "sources") {
+      const collected = [];
+      if (rawValue.length > 0) {
+        collected.push(...splitListValue(rawValue));
+      } else {
+        while (i < lines.length) {
+          const itemMatch = lines[i].match(/^\s*-\s+(.+?)\s*$/);
+          if (!itemMatch) break;
+          collected.push(unquote(itemMatch[1]));
+          i++;
+        }
+      }
+      if (collected.length > 0) cfg.sources = collected;
+      continue;
+    }
+    if (rawValue.length === 0) continue;
     if (key === "source") {
       cfg.source = value;
     } else if (key === "title") {
@@ -9633,6 +9670,7 @@ function parseBlockConfig(source) {
         else if (key === "show_routes") cfg.show_routes = b;
         else if (key === "show_heatmap") cfg.show_heatmap = b;
         else if (key === "show_outliers") cfg.show_outliers = b;
+        else if (key === "interactive") cfg.interactive = b;
       }
     }
   }
@@ -10162,6 +10200,156 @@ async function loadExport(app, source) {
   }
   return parseJSONExport(raw, path);
 }
+async function loadExports(app, sources) {
+  const all = await Promise.all(sources.map((s) => loadExport(app, s)));
+  const visits = [];
+  const points = [];
+  let exportDate;
+  for (const e of all) {
+    if (e.visits) visits.push(...e.visits);
+    if (e.points) points.push(...e.points);
+    if (!exportDate && e.exportDate) exportDate = e.exportDate;
+  }
+  return {
+    visits: visits.length > 0 ? visits : null,
+    points: points.length > 0 ? points : null,
+    exportDate
+  };
+}
+
+// src/render/controls.ts
+var DEFAULT_FILTER = {
+  day: null,
+  timeStartMin: 0,
+  timeEndMin: 1440
+};
+function isoToLocalDay(iso) {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${dd}`;
+}
+function fmtDayLabel(day) {
+  const [y, m, d] = day.split("-").map(Number);
+  const dt = new Date(y, m - 1, d);
+  if (Number.isNaN(dt.getTime())) return day;
+  return dt.toLocaleDateString(void 0, {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+}
+function fmtTime(min) {
+  if (min >= 1440) return "End of day";
+  if (min <= 0) return "Start of day";
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  const period = h < 12 ? "AM" : "PM";
+  const h12 = (h + 11) % 12 + 1;
+  return `${h12}:${String(m).padStart(2, "0")} ${period}`;
+}
+function collectDays(data) {
+  var _a, _b;
+  const days = /* @__PURE__ */ new Set();
+  for (const v of (_a = data.visits) != null ? _a : []) {
+    const d = isoToLocalDay(v.arrivedAt);
+    if (d) days.add(d);
+  }
+  for (const p of (_b = data.points) != null ? _b : []) {
+    const d = isoToLocalDay(p.timestamp);
+    if (d) days.add(d);
+  }
+  return [...days].sort();
+}
+function filterData(data, filter) {
+  const matches = (iso) => {
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return false;
+    if (filter.day) {
+      if (isoToLocalDay(iso) !== filter.day) return false;
+    }
+    const minOfDay = d.getHours() * 60 + d.getMinutes();
+    return minOfDay >= filter.timeStartMin && minOfDay <= filter.timeEndMin;
+  };
+  const visits = data.visits ? data.visits.filter((v) => matches(v.arrivedAt)) : null;
+  const points = data.points ? data.points.filter((p) => matches(p.timestamp)) : null;
+  return { visits, points, exportDate: data.exportDate };
+}
+function buildControls(parent, days, initial, onChange) {
+  const el = parent.createDiv({ cls: "iso-me-controls" });
+  const state = { ...initial };
+  const dayWrap = el.createDiv({ cls: "iso-me-control" });
+  dayWrap.createEl("label", { text: "Day", cls: "iso-me-control-label" });
+  const daySelect = dayWrap.createEl("select", { cls: "iso-me-day-select" });
+  const allOpt = daySelect.createEl("option", { text: "All days" });
+  allOpt.value = "";
+  if (state.day === null) allOpt.selected = true;
+  for (const d of days) {
+    const opt = daySelect.createEl("option", { text: fmtDayLabel(d) });
+    opt.value = d;
+    if (state.day === d) opt.selected = true;
+  }
+  daySelect.addEventListener("change", () => {
+    state.day = daySelect.value === "" ? null : daySelect.value;
+    onChange({ ...state });
+  });
+  const timeWrap = el.createDiv({ cls: "iso-me-control iso-me-time-control" });
+  timeWrap.createEl("label", { text: "Time of day", cls: "iso-me-control-label" });
+  const slidersWrap = timeWrap.createDiv({ cls: "iso-me-time-sliders" });
+  const startLabel = slidersWrap.createEl("span", {
+    cls: "iso-me-time-label",
+    text: fmtTime(state.timeStartMin)
+  });
+  const startInput = slidersWrap.createEl("input", { cls: "iso-me-time-range" });
+  startInput.type = "range";
+  startInput.min = "0";
+  startInput.max = "1440";
+  startInput.step = "15";
+  startInput.value = String(state.timeStartMin);
+  const endInput = slidersWrap.createEl("input", { cls: "iso-me-time-range" });
+  endInput.type = "range";
+  endInput.min = "0";
+  endInput.max = "1440";
+  endInput.step = "15";
+  endInput.value = String(state.timeEndMin);
+  const endLabel = slidersWrap.createEl("span", {
+    cls: "iso-me-time-label",
+    text: fmtTime(state.timeEndMin)
+  });
+  startInput.addEventListener("input", () => {
+    let v = Number(startInput.value);
+    if (v > state.timeEndMin) v = state.timeEndMin;
+    state.timeStartMin = v;
+    startInput.value = String(v);
+    startLabel.textContent = fmtTime(v);
+  });
+  startInput.addEventListener("change", () => onChange({ ...state }));
+  endInput.addEventListener("input", () => {
+    let v = Number(endInput.value);
+    if (v < state.timeStartMin) v = state.timeStartMin;
+    state.timeEndMin = v;
+    endInput.value = String(v);
+    endLabel.textContent = fmtTime(v);
+  });
+  endInput.addEventListener("change", () => onChange({ ...state }));
+  const reset = el.createEl("button", { text: "Reset", cls: "iso-me-control-reset" });
+  reset.type = "button";
+  reset.addEventListener("click", () => {
+    state.day = null;
+    state.timeStartMin = DEFAULT_FILTER.timeStartMin;
+    state.timeEndMin = DEFAULT_FILTER.timeEndMin;
+    daySelect.value = "";
+    startInput.value = String(state.timeStartMin);
+    endInput.value = String(state.timeEndMin);
+    startLabel.textContent = fmtTime(state.timeStartMin);
+    endLabel.textContent = fmtTime(state.timeEndMin);
+    onChange({ ...state });
+  });
+  return el;
+}
 
 // src/render/heatmap.ts
 var L2 = __toESM(require_leaflet_src());
@@ -10251,19 +10439,19 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({ initialize: function(t, i) 
 };
 
 // src/render/heatmap.ts
-function renderHeatLayer(map2, points, radius, blur) {
+function renderHeatLayer(target, points, radius, blur) {
   if (points.length === 0) return;
   const data = points.map((p) => [
     p.latitude,
     p.longitude,
     1
   ]);
-  L2.heatLayer(data, { radius, blur }).addTo(map2);
+  L2.heatLayer(data, { radius, blur }).addTo(target);
 }
 
 // src/render/outliers.ts
 var L3 = __toESM(require_leaflet_src());
-function renderOutlierMarkers(map2, points, color) {
+function renderOutlierMarkers(target, points, color) {
   const bounds = [];
   for (const p of points) {
     const latlng = [p.latitude, p.longitude];
@@ -10273,7 +10461,7 @@ function renderOutlierMarkers(map2, points, color) {
       fillColor: color,
       fillOpacity: 0.85,
       weight: 1
-    }).bindPopup(`<div class="iso-me-popup-outlier">GPS glitch \xB7 ${p.timestamp}</div>`).addTo(map2);
+    }).bindPopup(`<div class="iso-me-popup-outlier">GPS glitch \xB7 ${p.timestamp}</div>`).addTo(target);
     bounds.push(latlng);
   }
   return bounds;
@@ -10292,7 +10480,7 @@ function downsample(arr, max) {
   out.push(arr[arr.length - 1]);
   return out;
 }
-function renderRoutePolyline(map2, points, color) {
+function renderRoutePolyline(target, points, color) {
   if (points.length === 0) return [];
   if (points.length === 1) {
     const p = points[0];
@@ -10303,7 +10491,7 @@ function renderRoutePolyline(map2, points, color) {
       fillColor: color,
       fillOpacity: 1,
       weight: 2
-    }).addTo(map2);
+    }).addTo(target);
     return [latlng];
   }
   const sampled = downsample(points, MAX_POINTS);
@@ -10316,7 +10504,7 @@ function renderRoutePolyline(map2, points, color) {
     opacity: 0.9,
     lineCap: "round",
     lineJoin: "round"
-  }).addTo(map2);
+  }).addTo(target);
   const start = coords[0];
   const end = coords[coords.length - 1];
   L4.circleMarker(start, {
@@ -10325,14 +10513,14 @@ function renderRoutePolyline(map2, points, color) {
     fillColor: "#22c55e",
     fillOpacity: 1,
     weight: 2
-  }).addTo(map2);
+  }).addTo(target);
   L4.circleMarker(end, {
     radius: 6,
     color: "#ef4444",
     fillColor: "#ef4444",
     fillOpacity: 1,
     weight: 2
-  }).addTo(map2);
+  }).addTo(target);
   return coords;
 }
 
@@ -10373,7 +10561,7 @@ function buildPopup(visit) {
   }
   return parts.join("");
 }
-function renderVisitMarkers(map2, visits, color) {
+function renderVisitMarkers(target, visits, color) {
   const bounds = [];
   for (const v of visits) {
     const latlng = [v.latitude, v.longitude];
@@ -10383,7 +10571,7 @@ function renderVisitMarkers(map2, visits, color) {
       fillColor: color,
       fillOpacity: 0.85,
       weight: 2
-    }).bindPopup(buildPopup(v)).addTo(map2);
+    }).bindPopup(buildPopup(v)).addTo(target);
     bounds.push(latlng);
   }
   return bounds;
@@ -10397,6 +10585,10 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
     this.settings = settings;
     this.cfg = cfg;
     this.map = null;
+    this.dynamicLayers = null;
+    this.fullData = null;
+    this.filter = { ...DEFAULT_FILTER };
+    this.hasFitInitial = false;
   }
   onload() {
     this.containerEl.addClass("iso-me-block");
@@ -10407,10 +10599,11 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
       this.map.remove();
       this.map = null;
     }
+    this.dynamicLayers = null;
     this.containerEl.empty();
   }
   async render() {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _i;
+    var _a, _b, _c, _d, _e;
     this.containerEl.empty();
     if (this.cfg.title) {
       this.containerEl.createEl("h4", {
@@ -10418,34 +10611,38 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
         cls: "iso-me-title"
       });
     }
-    if (!this.cfg.source) {
+    const sources = [];
+    if (this.cfg.source) sources.push(this.cfg.source);
+    if (this.cfg.sources) sources.push(...this.cfg.sources);
+    if (sources.length === 0) {
       this.renderError(
-        "Missing required `source:` key. Point it at a JSON export from iso.me, e.g. `source: exports/iso-export.json`."
+        "Missing required `source:` (or `sources:`) key. Point it at an iso.me export file (.json, .csv, or .md)."
       );
       return;
     }
     let data;
     try {
-      data = await loadExport(this.app, this.cfg.source);
+      data = await loadExports(this.app, sources);
     } catch (e) {
       const msg = e instanceof DataLoadError ? e.message : e instanceof Error ? e.message : String(e);
       this.renderError(msg);
       return;
     }
-    const showVisits = (_a = this.cfg.show_visits) != null ? _a : this.settings.showVisitsByDefault;
-    const showRoutes = (_b = this.cfg.show_routes) != null ? _b : this.settings.showRoutesByDefault;
-    const showHeatmap = (_c = this.cfg.show_heatmap) != null ? _c : this.settings.showHeatmapByDefault;
-    const showOutliers = (_d = this.cfg.show_outliers) != null ? _d : this.settings.showOutliersByDefault;
-    const visits = showVisits && data.visits ? data.visits : [];
-    const allPoints = (_e = data.points) != null ? _e : [];
-    const cleanPoints = allPoints.filter((p) => !p.isOutlier);
-    const outlierPoints = allPoints.filter((p) => p.isOutlier);
-    if (visits.length === 0 && allPoints.length === 0) {
+    if (((_b = (_a = data.visits) == null ? void 0 : _a.length) != null ? _b : 0) === 0 && ((_d = (_c = data.points) == null ? void 0 : _c.length) != null ? _d : 0) === 0) {
       this.renderEmpty("Export contains no visits or location points.");
       return;
     }
+    this.fullData = data;
+    this.filter = { ...DEFAULT_FILTER };
+    if (this.cfg.interactive) {
+      const days = collectDays(data);
+      buildControls(this.containerEl, days, this.filter, (state) => {
+        this.filter = state;
+        this.applyFilter();
+      });
+    }
     const mapEl = this.containerEl.createDiv({ cls: "iso-me-map" });
-    mapEl.style.height = `${(_f = this.cfg.height) != null ? _f : this.settings.defaultHeight}px`;
+    mapEl.style.height = `${(_e = this.cfg.height) != null ? _e : this.settings.defaultHeight}px`;
     const map2 = L6.map(mapEl, {
       zoomControl: true,
       attributionControl: true,
@@ -10456,16 +10653,40 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
       attribution: this.settings.tileAttribution,
       maxZoom: 19
     }).addTo(map2);
+    this.dynamicLayers = L6.layerGroup().addTo(map2);
+    this.applyFilter();
+    requestAnimationFrame(() => {
+      var _a2;
+      (_a2 = this.map) == null ? void 0 : _a2.invalidateSize();
+    });
+  }
+  applyFilter() {
+    var _a, _b, _c, _d, _e, _f, _g, _h;
+    const map2 = this.map;
+    const target = this.dynamicLayers;
+    if (!map2 || !target || !this.fullData) return;
+    target.clearLayers();
+    const filtered = filterData(this.fullData, this.filter);
+    const showVisits = (_a = this.cfg.show_visits) != null ? _a : this.settings.showVisitsByDefault;
+    const showRoutes = (_b = this.cfg.show_routes) != null ? _b : this.settings.showRoutesByDefault;
+    const showHeatmap = (_c = this.cfg.show_heatmap) != null ? _c : this.settings.showHeatmapByDefault;
+    const showOutliers = (_d = this.cfg.show_outliers) != null ? _d : this.settings.showOutliersByDefault;
+    const visits = showVisits && filtered.visits ? filtered.visits : [];
+    const allPoints = (_e = filtered.points) != null ? _e : [];
+    const cleanPoints = allPoints.filter((p) => !p.isOutlier);
+    const outlierPoints = allPoints.filter((p) => p.isOutlier);
     const bounds = [];
     if (visits.length > 0) {
-      bounds.push(...renderVisitMarkers(map2, visits, this.settings.markerColor));
+      bounds.push(...renderVisitMarkers(target, visits, this.settings.markerColor));
     }
     if (showRoutes && cleanPoints.length > 0) {
-      bounds.push(...renderRoutePolyline(map2, cleanPoints, this.settings.routeColor));
+      bounds.push(
+        ...renderRoutePolyline(target, cleanPoints, this.settings.routeColor)
+      );
     }
     if (showHeatmap && cleanPoints.length > 0) {
       renderHeatLayer(
-        map2,
+        target,
         cleanPoints,
         this.settings.heatRadius,
         this.settings.heatBlur
@@ -10476,22 +10697,26 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
     }
     if (showOutliers && outlierPoints.length > 0) {
       bounds.push(
-        ...renderOutlierMarkers(map2, outlierPoints, this.settings.outlierColor)
+        ...renderOutlierMarkers(target, outlierPoints, this.settings.outlierColor)
       );
     }
     if (bounds.length === 0) {
-      const center = (_g = this.cfg.center) != null ? _g : this.settings.defaultCenter;
-      map2.setView(center, (_h = this.cfg.zoom) != null ? _h : this.settings.defaultZoom);
-    } else if (bounds.length === 1) {
-      map2.setView(bounds[0], (_i = this.cfg.zoom) != null ? _i : 14);
+      if (!this.hasFitInitial) {
+        const center = (_f = this.cfg.center) != null ? _f : this.settings.defaultCenter;
+        map2.setView(center, (_g = this.cfg.zoom) != null ? _g : this.settings.defaultZoom);
+        this.hasFitInitial = true;
+      }
+      return;
+    }
+    if (bounds.length === 1) {
+      map2.setView(bounds[0], (_h = this.cfg.zoom) != null ? _h : 14);
     } else {
       map2.fitBounds(L6.latLngBounds(bounds), { padding: [20, 20] });
-      if (this.cfg.zoom != null) map2.setZoom(this.cfg.zoom);
+      if (!this.hasFitInitial && this.cfg.zoom != null) {
+        map2.setZoom(this.cfg.zoom);
+      }
     }
-    requestAnimationFrame(() => {
-      var _a2;
-      (_a2 = this.map) == null ? void 0 : _a2.invalidateSize();
-    });
+    this.hasFitInitial = true;
   }
   renderError(message) {
     this.containerEl.createDiv({
@@ -10509,10 +10734,59 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
 
 // src/settings.ts
 var import_obsidian3 = require("obsidian");
+var OSM_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+var CARTO_ATTR = `${OSM_ATTR} &copy; <a href="https://carto.com/attributions">CARTO</a>`;
+var TILE_PROVIDERS = [
+  {
+    id: "carto-voyager",
+    label: "CartoDB Voyager (default)",
+    url: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+    attribution: CARTO_ATTR
+  },
+  {
+    id: "carto-positron",
+    label: "CartoDB Positron (light)",
+    url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+    attribution: CARTO_ATTR
+  },
+  {
+    id: "carto-dark-matter",
+    label: "CartoDB Dark Matter (dark)",
+    url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+    attribution: CARTO_ATTR
+  },
+  {
+    id: "opentopomap",
+    label: "OpenTopoMap (topographic)",
+    url: "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+    attribution: `${OSM_ATTR}, <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)`
+  },
+  {
+    id: "esri-world-imagery",
+    label: "Esri World Imagery (satellite)",
+    url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    attribution: "Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community"
+  },
+  {
+    id: "osm",
+    label: "OpenStreetMap (mobile only \u2014 desktop is blocked)",
+    url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    attribution: OSM_ATTR,
+    note: "OSM's tile servers reject requests from desktop Obsidian (Electron referer policy). Works on the mobile app."
+  },
+  {
+    id: "custom",
+    label: "Custom (enter URL and attribution below)",
+    url: "",
+    attribution: ""
+  }
+];
 var LEGACY_OSM_TILE_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+var DEFAULT_PROVIDER = TILE_PROVIDERS[0];
 var DEFAULT_SETTINGS = {
-  tileUrl: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
-  tileAttribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  tileProvider: DEFAULT_PROVIDER.id,
+  tileUrl: DEFAULT_PROVIDER.url,
+  tileAttribution: DEFAULT_PROVIDER.attribution,
   defaultHeight: 400,
   defaultCenter: [0, 0],
   defaultZoom: 11,
@@ -10526,6 +10800,13 @@ var DEFAULT_SETTINGS = {
   showHeatmapByDefault: false,
   showOutliersByDefault: false
 };
+function findProviderByUrl(url) {
+  return TILE_PROVIDERS.find((p) => p.id !== "custom" && p.url === url);
+}
+function getProvider(id) {
+  var _a;
+  return (_a = TILE_PROVIDERS.find((p) => p.id === id)) != null ? _a : DEFAULT_PROVIDER;
+}
 var IsoMeSettingTab = class extends import_obsidian3.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
@@ -10534,18 +10815,44 @@ var IsoMeSettingTab = class extends import_obsidian3.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    new import_obsidian3.Setting(containerEl).setName("Tile layer URL").setDesc("Leaflet tile URL template. Default is OpenStreetMap.").addText(
-      (t) => t.setValue(this.plugin.settings.tileUrl).onChange(async (v) => {
-        this.plugin.settings.tileUrl = v.trim() || DEFAULT_SETTINGS.tileUrl;
+    const providerSetting = new import_obsidian3.Setting(containerEl).setName("Tile provider").setDesc("Pick a basemap. Choose Custom to use your own tile URL.").addDropdown((dd) => {
+      for (const p of TILE_PROVIDERS) dd.addOption(p.id, p.label);
+      dd.setValue(this.plugin.settings.tileProvider).onChange(async (v) => {
+        const id = v;
+        this.plugin.settings.tileProvider = id;
+        if (id !== "custom") {
+          const preset = getProvider(id);
+          this.plugin.settings.tileUrl = preset.url;
+          this.plugin.settings.tileAttribution = preset.attribution;
+        }
         await this.plugin.saveSettings();
-      })
-    );
-    new import_obsidian3.Setting(containerEl).setName("Tile attribution").setDesc("HTML attribution string shown in the bottom-right of the map.").addText(
-      (t) => t.setValue(this.plugin.settings.tileAttribution).onChange(async (v) => {
-        this.plugin.settings.tileAttribution = v;
-        await this.plugin.saveSettings();
-      })
-    );
+        this.display();
+      });
+    });
+    const activeProvider = getProvider(this.plugin.settings.tileProvider);
+    if (activeProvider.note) {
+      providerSetting.descEl.createEl("div", {
+        text: activeProvider.note,
+        cls: "mod-warning"
+      });
+    }
+    providerSetting.descEl.createEl("div", {
+      text: "Already-open notes keep their current basemap until you reload the note (or Obsidian)."
+    });
+    if (this.plugin.settings.tileProvider === "custom") {
+      new import_obsidian3.Setting(containerEl).setName("Tile layer URL").setDesc("Leaflet tile URL template (e.g. https://.../{z}/{x}/{y}.png).").addText(
+        (t) => t.setValue(this.plugin.settings.tileUrl).onChange(async (v) => {
+          this.plugin.settings.tileUrl = v.trim() || DEFAULT_SETTINGS.tileUrl;
+          await this.plugin.saveSettings();
+        })
+      );
+      new import_obsidian3.Setting(containerEl).setName("Tile attribution").setDesc("HTML attribution string shown in the bottom-right of the map.").addText(
+        (t) => t.setValue(this.plugin.settings.tileAttribution).onChange(async (v) => {
+          this.plugin.settings.tileAttribution = v;
+          await this.plugin.saveSettings();
+        })
+      );
+    }
     new import_obsidian3.Setting(containerEl).setName("Default map height").setDesc("Pixel height for maps that don't specify `height:` in the block.").addText(
       (t) => t.setValue(String(this.plugin.settings.defaultHeight)).onChange(async (v) => {
         const n = Number(v);
@@ -10647,11 +10954,19 @@ var IsoMeMapsPlugin = class extends import_obsidian4.Plugin {
   async loadSettings() {
     const data = await this.loadData();
     this.settings = { ...DEFAULT_SETTINGS, ...data != null ? data : {} };
+    let dirty = false;
     if (this.settings.tileUrl === LEGACY_OSM_TILE_URL) {
       this.settings.tileUrl = DEFAULT_SETTINGS.tileUrl;
       this.settings.tileAttribution = DEFAULT_SETTINGS.tileAttribution;
-      await this.saveSettings();
+      this.settings.tileProvider = DEFAULT_SETTINGS.tileProvider;
+      dirty = true;
     }
+    if (!data || data.tileProvider === void 0) {
+      const match = findProviderByUrl(this.settings.tileUrl);
+      this.settings.tileProvider = match ? match.id : "custom";
+      dirty = true;
+    }
+    if (dirty) await this.saveSettings();
   }
   async saveSettings() {
     await this.saveData(this.settings);

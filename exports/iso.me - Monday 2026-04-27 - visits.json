@@ -1,0 +1,37 @@
+{
+  "exportDate" : "2026-05-01T23:08:03.023Z",
+  "visits" : [
+    {
+      "address" : "29–35 Carretera el Coqui, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-27T14:15:23.000Z",
+      "latitude" : 18.327394595342096,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.22092829139096
+    },
+    {
+      "address" : "Carretera el Coqui, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-27T14:15:23.000Z",
+      "departedAt" : "2026-04-28T23:08:49.116Z",
+      "durationMinutes" : 1973.435259137551,
+      "latitude" : 18.327531364138615,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.220798370431
+    },
+    {
+      "address" : "2407–2413 Avenida Vistamar, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-27T13:53:15.000Z",
+      "latitude" : 18.32980839206686,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.2483217341102
+    },
+    {
+      "address" : "2407–2413 Avenida Vistamar, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-27T13:53:15.000Z",
+      "departedAt" : "2026-04-27T14:07:34.000Z",
+      "durationMinutes" : 14.3166723549366,
+      "latitude" : 18.329771816412965,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.24831589444345
+    }
+  ]
+}
