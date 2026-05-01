@@ -28,8 +28,8 @@
               "type": "markdown",
               "state": {
                 "file": "Map.md",
-                "mode": "source",
-                "source": false
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Map"
@@ -184,10 +184,15 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "fa4e30587c609766",
+  "active": "da15a5b3da8ee01c",
   "lastOpenFiles": [
-    "New 한.md",
+    "exports/isome_complete_export_2026-04-30_194148.md",
     "Map.md",
+    "exports/isome_complete_export_2026-04-30_184255.md",
+    "exports/isome_complete_export_2026-04-30_193608.md",
+    "exports/isome_complete_export_2026-04-30_193555.json",
+    "exports/isome_complete_export_2026-04-30_193526.csv",
+    "New 한.md",
     "exports/isome_complete_export_2026-04-30_121042.json",
     "exports",
     "Templates/Video Idea.md",
@@ -213,8 +218,6 @@
     "Data-Access-2.md",
     "Data-Access-Three.md",
     "Recording-Test.md",
-    "Making-Money-While-Programming-in-My-Hammock.md",
-    "How I post from obsidian widget.md",
     "Tech-Gear-for-Travel.txt",
     "Templates"
   ]

@@ -1972,7 +1972,7 @@ var require_leaflet_src = __commonJS({
           return 1 - Math.pow(1 - t, this._easeOutPower);
         }
       });
-      var Map = Evented.extend({
+      var Map2 = Evented.extend({
         options: {
           // @section Map State Options
           // @option crs: CRS = L.CRS.EPSG3857
@@ -3186,7 +3186,7 @@ var require_leaflet_src = __commonJS({
         }
       });
       function createMap(id, options) {
-        return new Map(id, options);
+        return new Map2(id, options);
       }
       var Control = Class.extend({
         // @section
@@ -3265,7 +3265,7 @@ var require_leaflet_src = __commonJS({
       var control = function(options) {
         return new Control(options);
       };
-      Map.include({
+      Map2.include({
         // @method addControl(control: Control): this
         // Adds the given control to the map
         addControl: function(control2) {
@@ -3678,10 +3678,10 @@ var require_leaflet_src = __commonJS({
           }
         }
       });
-      Map.mergeOptions({
+      Map2.mergeOptions({
         zoomControl: true
       });
-      Map.addInitHook(function() {
+      Map2.addInitHook(function() {
         if (this.options.zoomControl) {
           this.zoomControl = new Zoom();
           this.addControl(this.zoomControl);
@@ -3859,10 +3859,10 @@ var require_leaflet_src = __commonJS({
           this._container.innerHTML = prefixAndAttribs.join(' <span aria-hidden="true">|</span> ');
         }
       });
-      Map.mergeOptions({
+      Map2.mergeOptions({
         attributionControl: true
       });
-      Map.addInitHook(function() {
+      Map2.addInitHook(function() {
         if (this.options.attributionControl) {
           new Attribution().addTo(this);
         }
@@ -4483,7 +4483,7 @@ var require_leaflet_src = __commonJS({
           map2.fire("layeradd", { layer: this });
         }
       });
-      Map.include({
+      Map2.include({
         // @method addLayer(layer: Layer): this
         // Adds the given layer to the map
         addLayer: function(layer) {
@@ -5432,7 +5432,7 @@ var require_leaflet_src = __commonJS({
           return p.distanceTo(this._point) <= this._radius + this._clickTolerance();
         }
       });
-      function circleMarker3(latlng, options) {
+      function circleMarker4(latlng, options) {
         return new CircleMarker(latlng, options);
       }
       var Circle = CircleMarker.extend({
@@ -6585,7 +6585,7 @@ var require_leaflet_src = __commonJS({
           return [0, 0];
         }
       });
-      Map.include({
+      Map2.include({
         _initOverlay: function(OverlayClass, content, latlng, options) {
           var overlay = content;
           if (!(overlay instanceof OverlayClass)) {
@@ -6798,10 +6798,10 @@ var require_leaflet_src = __commonJS({
       var popup = function(options, source) {
         return new Popup(options, source);
       };
-      Map.mergeOptions({
+      Map2.mergeOptions({
         closePopupOnClick: true
       });
-      Map.include({
+      Map2.include({
         // @method openPopup(popup: Popup): this
         // Opens the specified popup while closing the previously opened (to make sure only one is opened at one time for usability).
         // @alternative
@@ -7042,7 +7042,7 @@ var require_leaflet_src = __commonJS({
       var tooltip = function(options, source) {
         return new Tooltip(options, source);
       };
-      Map.include({
+      Map2.include({
         // @method openTooltip(tooltip: Tooltip): this
         // Opens the specified tooltip.
         // @alternative
@@ -8791,7 +8791,7 @@ var require_leaflet_src = __commonJS({
       function svg(options) {
         return Browser.svg || Browser.vml ? new SVG(options) : null;
       }
-      Map.include({
+      Map2.include({
         // @namespace Map; @method getRenderer(layer: Path): Renderer
         // Returns the instance of `Renderer` that should be used to render the given
         // `Path`. It will ensure that the `renderer` options of the map and paths
@@ -8852,7 +8852,7 @@ var require_leaflet_src = __commonJS({
       GeoJSON.latLngsToCoords = latLngsToCoords;
       GeoJSON.getFeature = getFeature;
       GeoJSON.asFeature = asFeature;
-      Map.mergeOptions({
+      Map2.mergeOptions({
         // @option boxZoom: Boolean = true
         // Whether the map can be zoomed to a rectangular area specified by
         // dragging the mouse while pressing the shift key.
@@ -8956,8 +8956,8 @@ var require_leaflet_src = __commonJS({
           }
         }
       });
-      Map.addInitHook("addHandler", "boxZoom", BoxZoom);
-      Map.mergeOptions({
+      Map2.addInitHook("addHandler", "boxZoom", BoxZoom);
+      Map2.mergeOptions({
         // @option doubleClickZoom: Boolean|String = true
         // Whether the map can be zoomed in by double clicking on it and
         // zoomed out by double clicking while holding shift. If passed
@@ -8981,8 +8981,8 @@ var require_leaflet_src = __commonJS({
           }
         }
       });
-      Map.addInitHook("addHandler", "doubleClickZoom", DoubleClickZoom);
-      Map.mergeOptions({
+      Map2.addInitHook("addHandler", "doubleClickZoom", DoubleClickZoom);
+      Map2.mergeOptions({
         // @option dragging: Boolean = true
         // Whether the map is draggable with mouse/touch or not.
         dragging: true,
@@ -9141,8 +9141,8 @@ var require_leaflet_src = __commonJS({
           }
         }
       });
-      Map.addInitHook("addHandler", "dragging", Drag);
-      Map.mergeOptions({
+      Map2.addInitHook("addHandler", "dragging", Drag);
+      Map2.mergeOptions({
         // @option keyboard: Boolean = true
         // Makes the map focusable and allows users to navigate the map with keyboard
         // arrows and `+`/`-` keys.
@@ -9269,8 +9269,8 @@ var require_leaflet_src = __commonJS({
           stop(e);
         }
       });
-      Map.addInitHook("addHandler", "keyboard", Keyboard);
-      Map.mergeOptions({
+      Map2.addInitHook("addHandler", "keyboard", Keyboard);
+      Map2.mergeOptions({
         // @section Mouse wheel options
         // @option scrollWheelZoom: Boolean|String = true
         // Whether the map can be zoomed by using the mouse wheel. If passed `'center'`,
@@ -9323,9 +9323,9 @@ var require_leaflet_src = __commonJS({
           }
         }
       });
-      Map.addInitHook("addHandler", "scrollWheelZoom", ScrollWheelZoom);
+      Map2.addInitHook("addHandler", "scrollWheelZoom", ScrollWheelZoom);
       var tapHoldDelay = 600;
-      Map.mergeOptions({
+      Map2.mergeOptions({
         // @section Touch interaction options
         // @option tapHold: Boolean
         // Enables simulation of `contextmenu` event, default is `true` for mobile Safari.
@@ -9394,8 +9394,8 @@ var require_leaflet_src = __commonJS({
           e.target.dispatchEvent(simulatedEvent);
         }
       });
-      Map.addInitHook("addHandler", "tapHold", TapHold);
-      Map.mergeOptions({
+      Map2.addInitHook("addHandler", "tapHold", TapHold);
+      Map2.mergeOptions({
         // @section Touch interaction options
         // @option touchZoom: Boolean|String = *
         // Whether the map can be zoomed by touch-dragging with two fingers. If
@@ -9483,14 +9483,14 @@ var require_leaflet_src = __commonJS({
           }
         }
       });
-      Map.addInitHook("addHandler", "touchZoom", TouchZoom);
-      Map.BoxZoom = BoxZoom;
-      Map.DoubleClickZoom = DoubleClickZoom;
-      Map.Drag = Drag;
-      Map.Keyboard = Keyboard;
-      Map.ScrollWheelZoom = ScrollWheelZoom;
-      Map.TapHold = TapHold;
-      Map.TouchZoom = TouchZoom;
+      Map2.addInitHook("addHandler", "touchZoom", TouchZoom);
+      Map2.BoxZoom = BoxZoom;
+      Map2.DoubleClickZoom = DoubleClickZoom;
+      Map2.Drag = Drag;
+      Map2.Keyboard = Keyboard;
+      Map2.ScrollWheelZoom = ScrollWheelZoom;
+      Map2.TapHold = TapHold;
+      Map2.TouchZoom = TouchZoom;
       exports2.Bounds = Bounds;
       exports2.Browser = Browser;
       exports2.CRS = CRS;
@@ -9516,7 +9516,7 @@ var require_leaflet_src = __commonJS({
       exports2.Layer = Layer;
       exports2.LayerGroup = LayerGroup;
       exports2.LineUtil = LineUtil;
-      exports2.Map = Map;
+      exports2.Map = Map2;
       exports2.Marker = Marker;
       exports2.Mixin = Mixin;
       exports2.Path = Path;
@@ -9540,7 +9540,7 @@ var require_leaflet_src = __commonJS({
       exports2.bounds = toBounds;
       exports2.canvas = canvas;
       exports2.circle = circle;
-      exports2.circleMarker = circleMarker3;
+      exports2.circleMarker = circleMarker4;
       exports2.control = control;
       exports2.divIcon = divIcon;
       exports2.extend = extend;
@@ -9588,7 +9588,7 @@ module.exports = __toCommonJS(main_exports);
 var import_obsidian4 = require("obsidian");
 
 // src/parser.ts
-var BOOL_KEYS = /* @__PURE__ */ new Set(["show_visits", "show_routes", "show_heatmap"]);
+var BOOL_KEYS = /* @__PURE__ */ new Set(["show_visits", "show_routes", "show_heatmap", "show_outliers"]);
 var NUMBER_KEYS = /* @__PURE__ */ new Set(["zoom", "height"]);
 function parseCenter(value) {
   const m = value.match(/^\[\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\]$/);
@@ -9632,6 +9632,7 @@ function parseBlockConfig(source) {
         if (key === "show_visits") cfg.show_visits = b;
         else if (key === "show_routes") cfg.show_routes = b;
         else if (key === "show_heatmap") cfg.show_heatmap = b;
+        else if (key === "show_outliers") cfg.show_outliers = b;
       }
     }
   }
@@ -9639,11 +9640,423 @@ function parseBlockConfig(source) {
 }
 
 // src/render/map-block.ts
-var L5 = __toESM(require_leaflet_src());
+var L6 = __toESM(require_leaflet_src());
 var import_obsidian2 = require("obsidian");
 
 // src/data-loader.ts
 var import_obsidian = require("obsidian");
+
+// src/csv-parser.ts
+var CSVParseError = class extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "CSVParseError";
+  }
+};
+function parseCSV(text) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let i = 0;
+  let inQuotes = false;
+  const len = text.length;
+  while (i < len) {
+    const c = text[i];
+    if (inQuotes) {
+      if (c === '"') {
+        if (i + 1 < len && text[i + 1] === '"') {
+          field += '"';
+          i += 2;
+          continue;
+        }
+        inQuotes = false;
+        i++;
+        continue;
+      }
+      field += c;
+      i++;
+      continue;
+    }
+    if (c === '"') {
+      inQuotes = true;
+      i++;
+      continue;
+    }
+    if (c === ",") {
+      row.push(field);
+      field = "";
+      i++;
+      continue;
+    }
+    if (c === "\r") {
+      i++;
+      continue;
+    }
+    if (c === "\n") {
+      row.push(field);
+      rows.push(row);
+      row = [];
+      field = "";
+      i++;
+      continue;
+    }
+    field += c;
+    i++;
+  }
+  if (field.length > 0 || row.length > 0) {
+    row.push(field);
+    rows.push(row);
+  }
+  return rows.filter((r) => !(r.length === 1 && r[0] === ""));
+}
+function toFiniteNumber(value) {
+  if (value === void 0) return null;
+  const trimmed = value.trim();
+  if (trimmed === "") return null;
+  const n = Number(trimmed);
+  return Number.isFinite(n) ? n : null;
+}
+function toBool(value) {
+  if (!value) return false;
+  const v = value.trim().toLowerCase();
+  return v === "true" || v === "yes" || v === "1";
+}
+function toString(value) {
+  if (value === void 0) return null;
+  const trimmed = value;
+  return trimmed === "" ? null : trimmed;
+}
+function buildHeaderMap(headers) {
+  const map2 = /* @__PURE__ */ new Map();
+  headers.forEach((h, idx) => {
+    map2.set(h.trim().toLowerCase(), idx);
+  });
+  return map2;
+}
+function isVisitsCSV(headers) {
+  return headers.has("arrived_at");
+}
+function isPointsCSV(headers) {
+  return headers.has("timestamp") && headers.has("latitude") && headers.has("longitude");
+}
+function parseVisits(rows, headers) {
+  const idx = (key) => headers.get(key);
+  const visits = [];
+  for (let r = 1; r < rows.length; r++) {
+    const row = rows[r];
+    const arrivedAt = idx("arrived_at") !== void 0 ? row[idx("arrived_at")] : void 0;
+    const lat = idx("latitude") !== void 0 ? toFiniteNumber(row[idx("latitude")]) : null;
+    const lon = idx("longitude") !== void 0 ? toFiniteNumber(row[idx("longitude")]) : null;
+    if (!arrivedAt || lat === null || lon === null) continue;
+    visits.push({
+      latitude: lat,
+      longitude: lon,
+      arrivedAt,
+      departedAt: idx("departed_at") !== void 0 ? toString(row[idx("departed_at")]) : null,
+      durationMinutes: idx("duration_minutes") !== void 0 ? toFiniteNumber(row[idx("duration_minutes")]) : null,
+      locationName: idx("location_name") !== void 0 ? toString(row[idx("location_name")]) : null,
+      address: idx("address") !== void 0 ? toString(row[idx("address")]) : null,
+      notes: idx("notes") !== void 0 ? toString(row[idx("notes")]) : null
+    });
+  }
+  return visits;
+}
+function parsePoints(rows, headers) {
+  const idx = (key) => headers.get(key);
+  const points = [];
+  for (let r = 1; r < rows.length; r++) {
+    const row = rows[r];
+    const timestamp = idx("timestamp") !== void 0 ? row[idx("timestamp")] : void 0;
+    const lat = idx("latitude") !== void 0 ? toFiniteNumber(row[idx("latitude")]) : null;
+    const lon = idx("longitude") !== void 0 ? toFiniteNumber(row[idx("longitude")]) : null;
+    if (!timestamp || lat === null || lon === null) continue;
+    const tsUnix = idx("timestamp_unix") !== void 0 ? toFiniteNumber(row[idx("timestamp_unix")]) : null;
+    const isOutlier = idx("is_outlier") !== void 0 ? toBool(row[idx("is_outlier")]) : false;
+    points.push({
+      latitude: lat,
+      longitude: lon,
+      timestamp,
+      timestampUnix: tsUnix != null ? tsUnix : void 0,
+      altitude: idx("altitude") !== void 0 ? toFiniteNumber(row[idx("altitude")]) : null,
+      speed: idx("speed") !== void 0 ? toFiniteNumber(row[idx("speed")]) : null,
+      course: null,
+      horizontalAccuracy: idx("horizontal_accuracy") !== void 0 ? toFiniteNumber(row[idx("horizontal_accuracy")]) : null,
+      verticalAccuracy: null,
+      isOutlier
+    });
+  }
+  return points;
+}
+function parseExportCSV(text) {
+  const rows = parseCSV(text);
+  if (rows.length === 0) {
+    throw new CSVParseError("CSV is empty");
+  }
+  const headerRow = rows[0];
+  const headers = buildHeaderMap(headerRow);
+  if (isVisitsCSV(headers)) {
+    return { visits: parseVisits(rows, headers), points: null };
+  }
+  if (isPointsCSV(headers)) {
+    return { visits: null, points: parsePoints(rows, headers) };
+  }
+  throw new CSVParseError(
+    `Unrecognized CSV header. Expected iso.me visits (arrived_at,...) or points (timestamp,latitude,longitude,...). Got: ${headerRow.join(",")}`
+  );
+}
+
+// src/markdown-parser.ts
+var MarkdownParseError = class extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "MarkdownParseError";
+  }
+};
+var MONTHS = {
+  january: 0,
+  february: 1,
+  march: 2,
+  april: 3,
+  may: 4,
+  june: 5,
+  july: 6,
+  august: 7,
+  september: 8,
+  october: 9,
+  november: 10,
+  december: 11
+};
+function parseDateHeading(text) {
+  const m = text.match(/(\w+)\s+(\d{1,2}),\s+(\d{4})/);
+  if (!m) return null;
+  const month = MONTHS[m[1].toLowerCase()];
+  if (month === void 0) return null;
+  const day = Number(m[2]);
+  const year = Number(m[3]);
+  if (!Number.isFinite(day) || !Number.isFinite(year)) return null;
+  return { year, month, day };
+}
+function parseTime(text) {
+  var _a;
+  const m = text.trim().match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?\s*(AM|PM)?$/i);
+  if (!m) return null;
+  let hour = Number(m[1]);
+  const minute = Number(m[2]);
+  const second = m[3] ? Number(m[3]) : 0;
+  const ampm = (_a = m[4]) == null ? void 0 : _a.toUpperCase();
+  if (ampm === "PM" && hour < 12) hour += 12;
+  else if (ampm === "AM" && hour === 12) hour = 0;
+  if (hour > 23 || minute > 59 || second > 59) return null;
+  return { hour, minute, second };
+}
+function combineToISO(date, time) {
+  const d = new Date(date.year, date.month, date.day, time.hour, time.minute, time.second);
+  if (Number.isNaN(d.getTime())) return null;
+  return d.toISOString();
+}
+function parseDurationText(text) {
+  const hMatch = text.match(/(\d+)\s*h/i);
+  const mMatch = text.match(/(\d+)\s*m(?!\w)/i);
+  const hours = hMatch ? Number(hMatch[1]) : 0;
+  const minutes = mMatch ? Number(mMatch[1]) : 0;
+  if (!hMatch && !mMatch) return null;
+  return hours * 60 + minutes;
+}
+function parseCoords(text) {
+  const m = text.match(/(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)/);
+  if (!m) return null;
+  const lat = Number(m[1]);
+  const lon = Number(m[2]);
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+  return [lat, lon];
+}
+function parseBulletField(line) {
+  const m = line.match(/^\s*-\s*\*\*([^*]+):\*\*\s*(.+?)\s*$/);
+  if (!m) return null;
+  return { key: m[1].trim().toLowerCase(), value: m[2].trim() };
+}
+function flushVisit(draft, visits) {
+  var _a, _b, _c, _d;
+  if (!draft.arrived || !draft.coords) return;
+  const arrivedAt = combineToISO(draft.date, draft.arrived);
+  if (!arrivedAt) return;
+  const departedAt = draft.departed ? combineToISO(draft.date, draft.departed) : null;
+  visits.push({
+    latitude: draft.coords[0],
+    longitude: draft.coords[1],
+    arrivedAt,
+    departedAt,
+    durationMinutes: (_a = draft.durationMinutes) != null ? _a : null,
+    locationName: (_b = draft.locationName) != null ? _b : null,
+    address: (_c = draft.address) != null ? _c : null,
+    notes: (_d = draft.notes) != null ? _d : null
+  });
+}
+function parseVisitsMarkdown(lines) {
+  const visits = [];
+  let currentDate = null;
+  let draft = null;
+  const finishDraft = () => {
+    if (draft) {
+      flushVisit(draft, visits);
+      draft = null;
+    }
+  };
+  for (const rawLine of lines) {
+    const line = rawLine.trimEnd();
+    if (line.startsWith("## ")) {
+      finishDraft();
+      currentDate = parseDateHeading(line.slice(3).trim());
+      continue;
+    }
+    if (line.startsWith("### ")) {
+      finishDraft();
+      if (!currentDate) continue;
+      const heading = line.slice(4).trim();
+      draft = { heading, date: currentDate };
+      if (!parseTime(heading)) {
+        draft.locationName = heading;
+      }
+      continue;
+    }
+    if (!draft) continue;
+    const bullet = parseBulletField(line);
+    if (bullet) {
+      switch (bullet.key) {
+        case "arrived": {
+          const t = parseTime(bullet.value);
+          if (t) draft.arrived = t;
+          break;
+        }
+        case "departed": {
+          const t = parseTime(bullet.value);
+          if (t) draft.departed = t;
+          break;
+        }
+        case "duration": {
+          const d = parseDurationText(bullet.value);
+          if (d !== null) draft.durationMinutes = d;
+          break;
+        }
+        case "address":
+          draft.address = bullet.value;
+          break;
+        case "coordinates": {
+          const c = parseCoords(bullet.value);
+          if (c) draft.coords = c;
+          break;
+        }
+      }
+      continue;
+    }
+    if (line.startsWith("> ")) {
+      const text = line.slice(2).trim();
+      draft.notes = draft.notes ? `${draft.notes}
+${text}` : text;
+    }
+  }
+  finishDraft();
+  return visits;
+}
+function parseTableRow(line) {
+  const trimmed = line.trim();
+  if (!trimmed.startsWith("|") || !trimmed.endsWith("|")) return null;
+  const inner = trimmed.slice(1, -1);
+  return inner.split("|").map((c) => c.trim());
+}
+function isSeparatorRow(cells) {
+  return cells.every((c) => /^:?-{3,}:?$/.test(c));
+}
+function stripUnit(value) {
+  if (!value || value === "-") return null;
+  const m = value.match(/(-?\d+(?:\.\d+)?)/);
+  if (!m) return null;
+  const n = Number(m[1]);
+  return Number.isFinite(n) ? n : null;
+}
+function parsePointsMarkdown(lines) {
+  var _a;
+  const points = [];
+  let currentDate = null;
+  let columns = null;
+  for (const rawLine of lines) {
+    const line = rawLine.trimEnd();
+    if (line.startsWith("## ")) {
+      currentDate = parseDateHeading(line.slice(3).trim());
+      columns = null;
+      continue;
+    }
+    const cells = parseTableRow(line);
+    if (!cells) continue;
+    if (!columns) {
+      const lowered = cells.map((c) => c.toLowerCase());
+      if (lowered.includes("time") && lowered.includes("lat") && lowered.includes("lon")) {
+        columns = /* @__PURE__ */ new Map();
+        lowered.forEach((c, idx2) => columns.set(c, idx2));
+      }
+      continue;
+    }
+    if (isSeparatorRow(cells)) continue;
+    if (!currentDate) continue;
+    const idx = (key) => columns.get(key);
+    const timeStr = idx("time") !== void 0 ? cells[idx("time")] : void 0;
+    const latStr = idx("lat") !== void 0 ? cells[idx("lat")] : void 0;
+    const lonStr = idx("lon") !== void 0 ? cells[idx("lon")] : void 0;
+    if (!timeStr || !latStr || !lonStr) continue;
+    const time = parseTime(timeStr);
+    if (!time) continue;
+    const lat = stripUnit(latStr);
+    const lon = stripUnit(lonStr);
+    if (lat === null || lon === null) continue;
+    const iso = combineToISO(currentDate, time);
+    if (!iso) continue;
+    const outlierIdx = idx("outlier");
+    let isOutlier = false;
+    if (outlierIdx !== void 0) {
+      const v = (_a = cells[outlierIdx]) == null ? void 0 : _a.toLowerCase();
+      isOutlier = v === "yes" || v === "true";
+    }
+    const speedIdx = idx("speed");
+    const altIdx = idx("altitude");
+    const accIdx = idx("accuracy");
+    points.push({
+      latitude: lat,
+      longitude: lon,
+      timestamp: iso,
+      altitude: altIdx !== void 0 ? stripUnit(cells[altIdx]) : null,
+      speed: speedIdx !== void 0 ? stripUnit(cells[speedIdx]) : null,
+      course: null,
+      horizontalAccuracy: accIdx !== void 0 ? stripUnit(cells[accIdx]) : null,
+      verticalAccuracy: null,
+      isOutlier
+    });
+  }
+  return points;
+}
+function parseExportMarkdown(text) {
+  const lines = text.split(/\r?\n/);
+  let kind = null;
+  for (const line of lines) {
+    const t = line.trim();
+    if (t.startsWith("# ")) {
+      const h = t.slice(2).trim().toLowerCase();
+      if (h.includes("location points")) kind = "points";
+      else if (h.includes("iso.me")) kind = "visits";
+      break;
+    }
+  }
+  if (kind === "visits") {
+    return { visits: parseVisitsMarkdown(lines), points: null };
+  }
+  if (kind === "points") {
+    return { visits: null, points: parsePointsMarkdown(lines) };
+  }
+  throw new MarkdownParseError(
+    'Unrecognized markdown. Expected H1 "# iso.me Export" or "# iso.me Location Points Export".'
+  );
+}
+
+// src/data-loader.ts
 var DataLoadError = class extends Error {
   constructor(message, source) {
     super(message);
@@ -9684,17 +10097,11 @@ function coercePoint(raw) {
     speed: isFiniteNumber(r.speed) ? r.speed : null,
     course: isFiniteNumber(r.course) ? r.course : null,
     horizontalAccuracy: isFiniteNumber(r.horizontalAccuracy) ? r.horizontalAccuracy : null,
-    verticalAccuracy: isFiniteNumber(r.verticalAccuracy) ? r.verticalAccuracy : null
+    verticalAccuracy: isFiniteNumber(r.verticalAccuracy) ? r.verticalAccuracy : null,
+    isOutlier: typeof r.isOutlier === "boolean" ? r.isOutlier : false
   };
 }
-async function loadExport(app, source) {
-  const path = (0, import_obsidian.normalizePath)(source);
-  let raw;
-  try {
-    raw = await app.vault.adapter.read(path);
-  } catch (e) {
-    throw new DataLoadError(`File not found: ${path}`, path);
-  }
+function parseJSONExport(raw, path) {
   let parsed;
   try {
     parsed = JSON.parse(raw);
@@ -9721,6 +10128,39 @@ async function loadExport(app, source) {
     points,
     exportDate: typeof root.exportDate === "string" ? root.exportDate : void 0
   };
+}
+function detectFormat(path) {
+  const lower = path.toLowerCase();
+  if (lower.endsWith(".csv")) return "csv";
+  if (lower.endsWith(".md") || lower.endsWith(".markdown")) return "markdown";
+  return "json";
+}
+async function loadExport(app, source) {
+  const path = (0, import_obsidian.normalizePath)(source);
+  let raw;
+  try {
+    raw = await app.vault.adapter.read(path);
+  } catch (e) {
+    throw new DataLoadError(`File not found: ${path}`, path);
+  }
+  const format = detectFormat(path);
+  if (format === "csv") {
+    try {
+      return parseExportCSV(raw);
+    } catch (e) {
+      const msg = e instanceof CSVParseError || e instanceof Error ? e.message : String(e);
+      throw new DataLoadError(`Invalid CSV: ${msg}`, path);
+    }
+  }
+  if (format === "markdown") {
+    try {
+      return parseExportMarkdown(raw);
+    } catch (e) {
+      const msg = e instanceof MarkdownParseError || e instanceof Error ? e.message : String(e);
+      throw new DataLoadError(`Invalid Markdown: ${msg}`, path);
+    }
+  }
+  return parseJSONExport(raw, path);
 }
 
 // src/render/heatmap.ts
@@ -9821,8 +10261,26 @@ function renderHeatLayer(map2, points, radius, blur) {
   L2.heatLayer(data, { radius, blur }).addTo(map2);
 }
 
-// src/render/routes.ts
+// src/render/outliers.ts
 var L3 = __toESM(require_leaflet_src());
+function renderOutlierMarkers(map2, points, color) {
+  const bounds = [];
+  for (const p of points) {
+    const latlng = [p.latitude, p.longitude];
+    L3.circleMarker(latlng, {
+      radius: 4,
+      color,
+      fillColor: color,
+      fillOpacity: 0.85,
+      weight: 1
+    }).bindPopup(`<div class="iso-me-popup-outlier">GPS glitch \xB7 ${p.timestamp}</div>`).addTo(map2);
+    bounds.push(latlng);
+  }
+  return bounds;
+}
+
+// src/render/routes.ts
+var L4 = __toESM(require_leaflet_src());
 var MAX_POINTS = 1500;
 function downsample(arr, max) {
   if (arr.length <= max) return arr;
@@ -9839,7 +10297,7 @@ function renderRoutePolyline(map2, points, color) {
   if (points.length === 1) {
     const p = points[0];
     const latlng = [p.latitude, p.longitude];
-    L3.circleMarker(latlng, {
+    L4.circleMarker(latlng, {
       radius: 6,
       color,
       fillColor: color,
@@ -9852,7 +10310,7 @@ function renderRoutePolyline(map2, points, color) {
   const coords = sampled.map(
     (p) => [p.latitude, p.longitude]
   );
-  L3.polyline(coords, {
+  L4.polyline(coords, {
     color,
     weight: 4,
     opacity: 0.9,
@@ -9861,14 +10319,14 @@ function renderRoutePolyline(map2, points, color) {
   }).addTo(map2);
   const start = coords[0];
   const end = coords[coords.length - 1];
-  L3.circleMarker(start, {
+  L4.circleMarker(start, {
     radius: 6,
     color: "#22c55e",
     fillColor: "#22c55e",
     fillOpacity: 1,
     weight: 2
   }).addTo(map2);
-  L3.circleMarker(end, {
+  L4.circleMarker(end, {
     radius: 6,
     color: "#ef4444",
     fillColor: "#ef4444",
@@ -9879,7 +10337,7 @@ function renderRoutePolyline(map2, points, color) {
 }
 
 // src/render/visits.ts
-var L4 = __toESM(require_leaflet_src());
+var L5 = __toESM(require_leaflet_src());
 function escapeHtml(value) {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
@@ -9919,7 +10377,7 @@ function renderVisitMarkers(map2, visits, color) {
   const bounds = [];
   for (const v of visits) {
     const latlng = [v.latitude, v.longitude];
-    L4.circleMarker(latlng, {
+    L5.circleMarker(latlng, {
       radius: 8,
       color,
       fillColor: color,
@@ -9952,7 +10410,7 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
     this.containerEl.empty();
   }
   async render() {
-    var _a, _b, _c, _d, _e, _f, _g, _h;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _i;
     this.containerEl.empty();
     if (this.cfg.title) {
       this.containerEl.createEl("h4", {
@@ -9977,23 +10435,24 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
     const showVisits = (_a = this.cfg.show_visits) != null ? _a : this.settings.showVisitsByDefault;
     const showRoutes = (_b = this.cfg.show_routes) != null ? _b : this.settings.showRoutesByDefault;
     const showHeatmap = (_c = this.cfg.show_heatmap) != null ? _c : this.settings.showHeatmapByDefault;
+    const showOutliers = (_d = this.cfg.show_outliers) != null ? _d : this.settings.showOutliersByDefault;
     const visits = showVisits && data.visits ? data.visits : [];
-    const points = (_d = data.points) != null ? _d : [];
-    if (visits.length === 0 && points.length === 0) {
-      this.renderEmpty(
-        visits.length === 0 && points.length === 0 ? "Export contains no visits or location points." : "Nothing to render with current display flags."
-      );
+    const allPoints = (_e = data.points) != null ? _e : [];
+    const cleanPoints = allPoints.filter((p) => !p.isOutlier);
+    const outlierPoints = allPoints.filter((p) => p.isOutlier);
+    if (visits.length === 0 && allPoints.length === 0) {
+      this.renderEmpty("Export contains no visits or location points.");
       return;
     }
     const mapEl = this.containerEl.createDiv({ cls: "iso-me-map" });
-    mapEl.style.height = `${(_e = this.cfg.height) != null ? _e : this.settings.defaultHeight}px`;
-    const map2 = L5.map(mapEl, {
+    mapEl.style.height = `${(_f = this.cfg.height) != null ? _f : this.settings.defaultHeight}px`;
+    const map2 = L6.map(mapEl, {
       zoomControl: true,
       attributionControl: true,
       scrollWheelZoom: false
     });
     this.map = map2;
-    L5.tileLayer(this.settings.tileUrl, {
+    L6.tileLayer(this.settings.tileUrl, {
       attribution: this.settings.tileAttribution,
       maxZoom: 19
     }).addTo(map2);
@@ -10001,22 +10460,32 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
     if (visits.length > 0) {
       bounds.push(...renderVisitMarkers(map2, visits, this.settings.markerColor));
     }
-    if (showRoutes && points.length > 0) {
-      bounds.push(...renderRoutePolyline(map2, points, this.settings.routeColor));
+    if (showRoutes && cleanPoints.length > 0) {
+      bounds.push(...renderRoutePolyline(map2, cleanPoints, this.settings.routeColor));
     }
-    if (showHeatmap && points.length > 0) {
-      renderHeatLayer(map2, points, this.settings.heatRadius, this.settings.heatBlur);
+    if (showHeatmap && cleanPoints.length > 0) {
+      renderHeatLayer(
+        map2,
+        cleanPoints,
+        this.settings.heatRadius,
+        this.settings.heatBlur
+      );
       if (!showRoutes) {
-        for (const p of points) bounds.push([p.latitude, p.longitude]);
+        for (const p of cleanPoints) bounds.push([p.latitude, p.longitude]);
       }
     }
+    if (showOutliers && outlierPoints.length > 0) {
+      bounds.push(
+        ...renderOutlierMarkers(map2, outlierPoints, this.settings.outlierColor)
+      );
+    }
     if (bounds.length === 0) {
-      const center = (_f = this.cfg.center) != null ? _f : this.settings.defaultCenter;
-      map2.setView(center, (_g = this.cfg.zoom) != null ? _g : this.settings.defaultZoom);
+      const center = (_g = this.cfg.center) != null ? _g : this.settings.defaultCenter;
+      map2.setView(center, (_h = this.cfg.zoom) != null ? _h : this.settings.defaultZoom);
     } else if (bounds.length === 1) {
-      map2.setView(bounds[0], (_h = this.cfg.zoom) != null ? _h : 14);
+      map2.setView(bounds[0], (_i = this.cfg.zoom) != null ? _i : 14);
     } else {
-      map2.fitBounds(L5.latLngBounds(bounds), { padding: [20, 20] });
+      map2.fitBounds(L6.latLngBounds(bounds), { padding: [20, 20] });
       if (this.cfg.zoom != null) map2.setZoom(this.cfg.zoom);
     }
     requestAnimationFrame(() => {
@@ -10040,19 +10509,22 @@ var MapRenderChild = class extends import_obsidian2.MarkdownRenderChild {
 
 // src/settings.ts
 var import_obsidian3 = require("obsidian");
+var LEGACY_OSM_TILE_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 var DEFAULT_SETTINGS = {
-  tileUrl: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-  tileAttribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  tileUrl: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+  tileAttribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   defaultHeight: 400,
   defaultCenter: [0, 0],
   defaultZoom: 11,
   markerColor: "#2dd4bf",
   routeColor: "#2563eb",
+  outlierColor: "#f59e0b",
   heatRadius: 25,
   heatBlur: 15,
   showVisitsByDefault: true,
   showRoutesByDefault: true,
-  showHeatmapByDefault: false
+  showHeatmapByDefault: false,
+  showOutliersByDefault: false
 };
 var IsoMeSettingTab = class extends import_obsidian3.PluginSettingTab {
   constructor(app, plugin) {
@@ -10104,6 +10576,12 @@ var IsoMeSettingTab = class extends import_obsidian3.PluginSettingTab {
         await this.plugin.saveSettings();
       })
     );
+    new import_obsidian3.Setting(containerEl).setName("GPS glitch (outlier) color").setDesc("Color for points iso.me has flagged as outliers when shown.").addText(
+      (t) => t.setValue(this.plugin.settings.outlierColor).onChange(async (v) => {
+        this.plugin.settings.outlierColor = v.trim() || DEFAULT_SETTINGS.outlierColor;
+        await this.plugin.saveSettings();
+      })
+    );
     new import_obsidian3.Setting(containerEl).setName("Heatmap radius").addText(
       (t) => t.setValue(String(this.plugin.settings.heatRadius)).onChange(async (v) => {
         const n = Number(v);
@@ -10140,6 +10618,14 @@ var IsoMeSettingTab = class extends import_obsidian3.PluginSettingTab {
         await this.plugin.saveSettings();
       })
     );
+    new import_obsidian3.Setting(containerEl).setName("Show GPS glitches (outliers) by default").setDesc(
+      "Render points iso.me has flagged as outliers as small scatter dots. Outliers are always excluded from the route polyline and heatmap."
+    ).addToggle(
+      (t) => t.setValue(this.plugin.settings.showOutliersByDefault).onChange(async (v) => {
+        this.plugin.settings.showOutliersByDefault = v;
+        await this.plugin.saveSettings();
+      })
+    );
   }
 };
 
@@ -10161,6 +10647,11 @@ var IsoMeMapsPlugin = class extends import_obsidian4.Plugin {
   async loadSettings() {
     const data = await this.loadData();
     this.settings = { ...DEFAULT_SETTINGS, ...data != null ? data : {} };
+    if (this.settings.tileUrl === LEGACY_OSM_TILE_URL) {
+      this.settings.tileUrl = DEFAULT_SETTINGS.tileUrl;
+      this.settings.tileAttribution = DEFAULT_SETTINGS.tileAttribution;
+      await this.saveSettings();
+    }
   }
   async saveSettings() {
     await this.saveData(this.settings);

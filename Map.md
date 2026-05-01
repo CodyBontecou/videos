@@ -7,7 +7,7 @@ video_url:
 ---
 ```iso-me
 
-source: exports/isome_complete_export_2026-04-30_121042.json
+source: exports/isome_complete_export_2026-04-30_184255.md
 
 height: 500
 
@@ -20,7 +20,7 @@ show_visits: true
 show_routes: true
 
 show_heatmap: false
-
+show_outliers:false
 title: April 2026 trip
 
 ```
