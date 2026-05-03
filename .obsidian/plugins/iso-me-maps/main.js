@@ -10554,29 +10554,6 @@ function downsample(arr, max) {
   out.push(arr[arr.length - 1]);
   return out;
 }
-function totalDistanceMeters(points) {
-  let total = 0;
-  for (let i = 1; i < points.length; i++) {
-    const a = points[i - 1];
-    const b = points[i];
-    total += L4.latLng(a.latitude, a.longitude).distanceTo(
-      L4.latLng(b.latitude, b.longitude)
-    );
-  }
-  return total;
-}
-function straightDistanceMeters(points) {
-  const a = points[0];
-  const b = points[points.length - 1];
-  return L4.latLng(a.latitude, a.longitude).distanceTo(
-    L4.latLng(b.latitude, b.longitude)
-  );
-}
-function formatDistance(meters) {
-  if (meters < 1e3) return `${Math.round(meters)} m`;
-  const km = meters / 1e3;
-  return km < 10 ? `${km.toFixed(2)} km` : `${km.toFixed(1)} km`;
-}
 function renderRoutePolyline(target, points, color) {
   if (points.length === 0) return [];
   if (points.length === 1) {
@@ -10595,17 +10572,13 @@ function renderRoutePolyline(target, points, color) {
   const coords = sampled.map(
     (p) => [p.latitude, p.longitude]
   );
-  const pathMeters = totalDistanceMeters(points);
-  const straightMeters = straightDistanceMeters(points);
-  const polyline2 = L4.polyline(coords, {
+  L4.polyline(coords, {
     color,
     weight: 4,
     opacity: 0.9,
     lineCap: "round",
     lineJoin: "round"
   }).addTo(target);
-  const popupHtml = `<div class="iso-me-route-popup"><div><strong>Path:</strong> ${formatDistance(pathMeters)}</div><div><strong>Straight:</strong> ${formatDistance(straightMeters)}</div></div>`;
-  polyline2.bindPopup(popupHtml);
   const start = coords[0];
   const end = coords[coords.length - 1];
   L4.circleMarker(start, {

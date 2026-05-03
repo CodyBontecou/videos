@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "94ae627699c30bfc",
+        "id": "f8636835ed449c40",
         "type": "tabs",
         "children": [
           {
-            "id": "fb0bc1ddfb703d5a",
+            "id": "1db29d208f442217",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Map.md",
+                "file": "New 한한!.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Map"
+              "title": "New 한한!"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 234.5
   },
   "right": {
     "id": "3d949c2fb5bc65c9",
@@ -174,7 +174,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian42-brat:BRAT": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -183,47 +182,37 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-timemd:time.md: Open Overview": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "fb0bc1ddfb703d5a",
+  "active": "1db29d208f442217",
   "lastOpenFiles": [
-    "exports/isome_complete_export_2026-04-30_121042.json",
-    "exports/isome_complete_export_2026-04-30_193555.json",
-    "exports/isome_complete_export_2026-04-30_193608.md",
-    "time.md examples/All embeds reference.md",
-    "time.md examples/Distribution.md",
-    "exports/time.md/timeprint-export-20260503-080426.json",
-    "exports/time.md/timeprint-export-20260502-220524.json",
-    "time.md examples/Web history.md",
-    "time.md examples/Daily dashboard.md",
-    "time.md examples/Projects breakdown.md",
-    "time.md examples/Reports.md",
-    "Map.md",
-    "time.md examples",
-    "exports/time.md/timeprint-export-20260501-200734.md",
-    "exports/time.md/timeprint-export-20260411-205757.json",
-    "exports/time.md",
-    "exports/time.md/screentime-rawSessions-2026-04-01_to_2026-04-10-20260410-142955.json",
-    "exports/time.md/timeprint-export-20260411-205806.md",
-    "exports/time.md/timeprint-export-20260411-205847.md",
-    "exports/iso.me - Thursday 2026-04-30 - all.json",
-    "exports/iso.me - Friday 2026-05-01 - all.json",
-    "exports/iso.me - Friday 2026-05-01 - visits.json",
-    "exports/iso.me - Thursday 2026-04-30 - visits.json",
+    "New 한한.md",
+    "New 한한!.md",
+    "New 한한한.md",
     "노트.md",
-    "exports/isome_complete_export_2026-04-30_184255.md",
-    "Clippings/Where Are You Still Using Single-Ply?.md",
-    "exports/isome_complete_export_2026-04-30_194148.md",
-    "Building-My-Own-Gumroad-Alternative.md",
-    "conflict-files-obsidian-git.md",
-    "New 한.md",
-    "New 한~~~Merge Conflict.md",
+    "메모.md",
+    "일기.md",
+    "Test-renamed.md",
+    "Test-rename-in-obsidian-sync.md",
+    "Test.md",
+    "Test-rename.md",
     "Templates/Video Idea.md",
+    "conflict-files-obsidian-git.md",
+    "Extract video editor.md",
+    "test.md",
+    "How I post from obsidian widget.md",
+    "Subtitles (srt).md",
+    "Building-My-Own-Gumroad-Alternative.md",
+    "Mobile-Phone-Usage-Shift.md",
+    "Making-Money-While-Programming-in-My-Hammock.md",
+    "Recording-Stopper-App.md",
+    "Enabling users to access their own data.md",
+    "Checking-in-from-Live-Activity-Banner.md",
+    "Fun-Project-Idea.md",
+    "Recording-Test.md",
     "Data-Access.md",
-    "Data-Access-2.md",
     "Data-Access-Three.md",
-    "Enabling users to access their own data.md"
+    "Templates"
   ]
 }
