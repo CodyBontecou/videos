@@ -10173,6 +10173,79 @@ function detectFormat(path) {
   if (lower.endsWith(".md") || lower.endsWith(".markdown")) return "markdown";
   return "json";
 }
+var SUPPORTED_EXTENSIONS = [".json", ".csv", ".md", ".markdown"];
+function hasSupportedExtension(path) {
+  const lower = path.toLowerCase();
+  return SUPPORTED_EXTENSIONS.some((ext) => lower.endsWith(ext));
+}
+function splitDirAndName(path) {
+  const idx = path.lastIndexOf("/");
+  if (idx < 0) return { dir: "", name: path };
+  return { dir: path.slice(0, idx), name: path.slice(idx + 1) };
+}
+function globToRegExp(pattern) {
+  let out = "^";
+  for (let i = 0; i < pattern.length; i++) {
+    const ch = pattern[i];
+    if (ch === "*") out += "[^/]*";
+    else if (ch === "?") out += "[^/]";
+    else if (/[.+^${}()|[\]\\]/.test(ch)) out += `\\${ch}`;
+    else out += ch;
+  }
+  out += "$";
+  return new RegExp(out);
+}
+async function expandSource(app, source) {
+  const path = (0, import_obsidian.normalizePath)(source);
+  if (path.includes("*") || path.includes("?")) {
+    const { dir, name } = splitDirAndName(path);
+    if (name.includes("*") || name.includes("?")) {
+      let listing;
+      try {
+        listing = await app.vault.adapter.list(dir || "/");
+      } catch (e) {
+        return [path];
+      }
+      const re = globToRegExp(name);
+      const matches = listing.files.filter((p) => {
+        const tail = splitDirAndName(p).name;
+        return re.test(tail) && hasSupportedExtension(tail);
+      }).sort();
+      return matches.length > 0 ? matches : [path];
+    }
+    return [path];
+  }
+  let stat = null;
+  try {
+    stat = await app.vault.adapter.stat(path);
+  } catch (e) {
+    stat = null;
+  }
+  if (stat && stat.type === "folder") {
+    try {
+      const listing = await app.vault.adapter.list(path);
+      const matches = listing.files.filter(hasSupportedExtension).sort();
+      return matches.length > 0 ? matches : [path];
+    } catch (e) {
+      return [path];
+    }
+  }
+  return [path];
+}
+async function expandSources(app, sources) {
+  const seen = /* @__PURE__ */ new Set();
+  const out = [];
+  for (const s of sources) {
+    const expanded = await expandSource(app, s);
+    for (const p of expanded) {
+      if (!seen.has(p)) {
+        seen.add(p);
+        out.push(p);
+      }
+    }
+  }
+  return out;
+}
 async function loadExport(app, source) {
   const path = (0, import_obsidian.normalizePath)(source);
   let raw;
@@ -10201,7 +10274,8 @@ async function loadExport(app, source) {
   return parseJSONExport(raw, path);
 }
 async function loadExports(app, sources) {
-  const all = await Promise.all(sources.map((s) => loadExport(app, s)));
+  const expanded = await expandSources(app, sources);
+  const all = await Promise.all(expanded.map((s) => loadExport(app, s)));
   const visits = [];
   const points = [];
   let exportDate;
@@ -10480,6 +10554,29 @@ function downsample(arr, max) {
   out.push(arr[arr.length - 1]);
   return out;
 }
+function totalDistanceMeters(points) {
+  let total = 0;
+  for (let i = 1; i < points.length; i++) {
+    const a = points[i - 1];
+    const b = points[i];
+    total += L4.latLng(a.latitude, a.longitude).distanceTo(
+      L4.latLng(b.latitude, b.longitude)
+    );
+  }
+  return total;
+}
+function straightDistanceMeters(points) {
+  const a = points[0];
+  const b = points[points.length - 1];
+  return L4.latLng(a.latitude, a.longitude).distanceTo(
+    L4.latLng(b.latitude, b.longitude)
+  );
+}
+function formatDistance(meters) {
+  if (meters < 1e3) return `${Math.round(meters)} m`;
+  const km = meters / 1e3;
+  return km < 10 ? `${km.toFixed(2)} km` : `${km.toFixed(1)} km`;
+}
 function renderRoutePolyline(target, points, color) {
   if (points.length === 0) return [];
   if (points.length === 1) {
@@ -10498,13 +10595,17 @@ function renderRoutePolyline(target, points, color) {
   const coords = sampled.map(
     (p) => [p.latitude, p.longitude]
   );
-  L4.polyline(coords, {
+  const pathMeters = totalDistanceMeters(points);
+  const straightMeters = straightDistanceMeters(points);
+  const polyline2 = L4.polyline(coords, {
     color,
     weight: 4,
     opacity: 0.9,
     lineCap: "round",
     lineJoin: "round"
   }).addTo(target);
+  const popupHtml = `<div class="iso-me-route-popup"><div><strong>Path:</strong> ${formatDistance(pathMeters)}</div><div><strong>Straight:</strong> ${formatDistance(straightMeters)}</div></div>`;
+  polyline2.bindPopup(popupHtml);
   const start = coords[0];
   const end = coords[coords.length - 1];
   L4.circleMarker(start, {
