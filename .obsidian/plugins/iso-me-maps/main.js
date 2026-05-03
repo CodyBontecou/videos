@@ -10173,6 +10173,79 @@ function detectFormat(path) {
   if (lower.endsWith(".md") || lower.endsWith(".markdown")) return "markdown";
   return "json";
 }
+var SUPPORTED_EXTENSIONS = [".json", ".csv", ".md", ".markdown"];
+function hasSupportedExtension(path) {
+  const lower = path.toLowerCase();
+  return SUPPORTED_EXTENSIONS.some((ext) => lower.endsWith(ext));
+}
+function splitDirAndName(path) {
+  const idx = path.lastIndexOf("/");
+  if (idx < 0) return { dir: "", name: path };
+  return { dir: path.slice(0, idx), name: path.slice(idx + 1) };
+}
+function globToRegExp(pattern) {
+  let out = "^";
+  for (let i = 0; i < pattern.length; i++) {
+    const ch = pattern[i];
+    if (ch === "*") out += "[^/]*";
+    else if (ch === "?") out += "[^/]";
+    else if (/[.+^${}()|[\]\\]/.test(ch)) out += `\\${ch}`;
+    else out += ch;
+  }
+  out += "$";
+  return new RegExp(out);
+}
+async function expandSource(app, source) {
+  const path = (0, import_obsidian.normalizePath)(source);
+  if (path.includes("*") || path.includes("?")) {
+    const { dir, name } = splitDirAndName(path);
+    if (name.includes("*") || name.includes("?")) {
+      let listing;
+      try {
+        listing = await app.vault.adapter.list(dir || "/");
+      } catch (e) {
+        return [path];
+      }
+      const re = globToRegExp(name);
+      const matches = listing.files.filter((p) => {
+        const tail = splitDirAndName(p).name;
+        return re.test(tail) && hasSupportedExtension(tail);
+      }).sort();
+      return matches.length > 0 ? matches : [path];
+    }
+    return [path];
+  }
+  let stat = null;
+  try {
+    stat = await app.vault.adapter.stat(path);
+  } catch (e) {
+    stat = null;
+  }
+  if (stat && stat.type === "folder") {
+    try {
+      const listing = await app.vault.adapter.list(path);
+      const matches = listing.files.filter(hasSupportedExtension).sort();
+      return matches.length > 0 ? matches : [path];
+    } catch (e) {
+      return [path];
+    }
+  }
+  return [path];
+}
+async function expandSources(app, sources) {
+  const seen = /* @__PURE__ */ new Set();
+  const out = [];
+  for (const s of sources) {
+    const expanded = await expandSource(app, s);
+    for (const p of expanded) {
+      if (!seen.has(p)) {
+        seen.add(p);
+        out.push(p);
+      }
+    }
+  }
+  return out;
+}
 async function loadExport(app, source) {
   const path = (0, import_obsidian.normalizePath)(source);
   let raw;
@@ -10201,7 +10274,8 @@ async function loadExport(app, source) {
   return parseJSONExport(raw, path);
 }
 async function loadExports(app, sources) {
-  const all = await Promise.all(sources.map((s) => loadExport(app, s)));
+  const expanded = await expandSources(app, sources);
+  const all = await Promise.all(expanded.map((s) => loadExport(app, s)));
   const visits = [];
   const points = [];
   let exportDate;
