@@ -1,8 +1,13 @@
 {
   "pluginList": [
+    "CodyBontecou/obsidian-timemd",
     "CodyBontecou/obsidian-iso-me-maps"
   ],
   "pluginSubListFrozenVersion": [
+    {
+      "repo": "CodyBontecou/obsidian-timemd",
+      "version": "latest"
+    },
     {
       "repo": "CodyBontecou/obsidian-iso-me-maps",
       "version": "latest"

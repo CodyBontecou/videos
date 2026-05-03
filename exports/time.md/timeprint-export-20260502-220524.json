@@ -1,0 +1,1109 @@
+{
+  "filters" : "date_range=2026-05-01..2026-05-02; granularity=day; apps=all; categories=all; heatmap=all",
+  "generated_at" : "2026-05-02T22:05:24-04:00",
+  "section_count" : 6,
+  "sections" : [
+    {
+      "data" : [
+        {
+          "metric" : "total_seconds",
+          "value" : 72893.542000000001
+        },
+        {
+          "metric" : "average_daily_seconds",
+          "value" : 36446.771000000001
+        },
+        {
+          "metric" : "focus_blocks",
+          "value" : 1
+        }
+      ],
+      "display_name" : "Summary",
+      "name" : "summary"
+    },
+    {
+      "data" : [
+        {
+          "app_name" : "Arc",
+          "session_count" : 328,
+          "total_seconds" : 30464.130000000001
+        },
+        {
+          "app_name" : "iTerm2",
+          "session_count" : 307,
+          "total_seconds" : 17230.036
+        },
+        {
+          "app_name" : "League Of Legends",
+          "session_count" : 8,
+          "total_seconds" : 4011.5369999999998
+        },
+        {
+          "app_name" : "Obsidian",
+          "session_count" : 57,
+          "total_seconds" : 1655.3389999999999
+        },
+        {
+          "app_name" : "Slack",
+          "session_count" : 20,
+          "total_seconds" : 1148.364
+        },
+        {
+          "app_name" : "md",
+          "session_count" : 86,
+          "total_seconds" : 975.178
+        },
+        {
+          "app_name" : "League of Legends",
+          "session_count" : 37,
+          "total_seconds" : 865.38800000000003
+        },
+        {
+          "app_name" : "Mail",
+          "session_count" : 23,
+          "total_seconds" : 776.29600000000005
+        },
+        {
+          "app_name" : "Discord",
+          "session_count" : 31,
+          "total_seconds" : 594.17399999999998
+        },
+        {
+          "app_name" : "Photos",
+          "session_count" : 1,
+          "total_seconds" : 189.107
+        },
+        {
+          "app_name" : "Figma",
+          "session_count" : 5,
+          "total_seconds" : 159.49799999999999
+        },
+        {
+          "app_name" : "Screen Studio",
+          "session_count" : 17,
+          "total_seconds" : 148.47999999999999
+        },
+        {
+          "app_name" : "ASCDashboard",
+          "session_count" : 4,
+          "total_seconds" : 138.721
+        },
+        {
+          "app_name" : "Finder",
+          "session_count" : 17,
+          "total_seconds" : 135.87100000000001
+        },
+        {
+          "app_name" : "System Settings",
+          "session_count" : 12,
+          "total_seconds" : 92.864000000000004
+        },
+        {
+          "app_name" : "Docker Desktop",
+          "session_count" : 4,
+          "total_seconds" : 71.912999999999997
+        },
+        {
+          "app_name" : "storeuid",
+          "session_count" : 4,
+          "total_seconds" : 52.002000000000002
+        },
+        {
+          "app_name" : "App Store",
+          "session_count" : 8,
+          "total_seconds" : 51.524000000000001
+        },
+        {
+          "app_name" : "UserNotificationCenter",
+          "session_count" : 2,
+          "total_seconds" : 29.710999999999999
+        },
+        {
+          "app_name" : "League of Legends",
+          "session_count" : 3,
+          "total_seconds" : 15.808999999999999
+        },
+        {
+          "app_name" : "Google Chrome",
+          "session_count" : 3,
+          "total_seconds" : 10.837
+        },
+        {
+          "app_name" : "CleanShot X",
+          "session_count" : 2,
+          "total_seconds" : 7.976
+        },
+        {
+          "app_name" : "Passwords Extension Helper",
+          "session_count" : 1,
+          "total_seconds" : 6.5430000000000001
+        },
+        {
+          "app_name" : "Calendar",
+          "session_count" : 1,
+          "total_seconds" : 4.9020000000000001
+        },
+        {
+          "app_name" : "Messages",
+          "session_count" : 1,
+          "total_seconds" : 4.0860000000000003
+        },
+        {
+          "app_name" : "Problem Reporter",
+          "session_count" : 1,
+          "total_seconds" : 3.794
+        },
+        {
+          "app_name" : "Amphetamine",
+          "session_count" : 1,
+          "total_seconds" : 3.3660000000000001
+        },
+        {
+          "app_name" : "Calculator",
+          "session_count" : 1,
+          "total_seconds" : 2.5910000000000002
+        },
+        {
+          "app_name" : "Xcode",
+          "session_count" : 1,
+          "total_seconds" : 2.04
+        }
+      ],
+      "display_name" : "Top Apps",
+      "name" : "apps"
+    },
+    {
+      "data" : [
+        {
+          "category" : "Productivity",
+          "total_seconds" : 50266.574999999997
+        },
+        {
+          "category" : "Uncategorized",
+          "total_seconds" : 14146.944
+        },
+        {
+          "category" : "Games",
+          "total_seconds" : 4892.7340000000004
+        },
+        {
+          "category" : "Business",
+          "total_seconds" : 1148.364
+        },
+        {
+          "category" : "Health & Fitness",
+          "total_seconds" : 975.178
+        },
+        {
+          "category" : "Social Networking",
+          "total_seconds" : 598.25999999999999
+        },
+        {
+          "category" : "Developer Tools",
+          "total_seconds" : 361.154
+        },
+        {
+          "category" : "Photography",
+          "total_seconds" : 189.107
+        },
+        {
+          "category" : "Graphics & Design",
+          "total_seconds" : 159.49799999999999
+        },
+        {
+          "category" : "Utilities",
+          "total_seconds" : 155.72999999999999
+        }
+      ],
+      "display_name" : "Categories",
+      "name" : "categories"
+    },
+    {
+      "data" : [
+        {
+          "date" : "2026-05-01",
+          "total_seconds" : 30578.991000000002
+        },
+        {
+          "date" : "2026-05-02",
+          "total_seconds" : 42314.550999999999
+        }
+      ],
+      "display_name" : "Trends",
+      "name" : "trends"
+    },
+    {
+      "data" : [
+        {
+          "duration_range" : "<1m",
+          "session_count" : 1042
+        },
+        {
+          "duration_range" : "1–5m",
+          "session_count" : 154
+        },
+        {
+          "duration_range" : "5–15m",
+          "session_count" : 39
+        },
+        {
+          "duration_range" : "15–30m",
+          "session_count" : 13
+        },
+        {
+          "duration_range" : "30–60m",
+          "session_count" : 1
+        }
+      ],
+      "display_name" : "Session Distribution",
+      "name" : "sessions"
+    },
+    {
+      "data" : [
+        {
+          "hour" : 0,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 1,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 2,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 3,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 4,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 5,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 6,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 7,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 8,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 9,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 10,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 11,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 12,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 13,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 14,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 15,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 16,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 17,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 18,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 19,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 20,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 21,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 22,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 23,
+          "total_seconds" : 0,
+          "weekday" : 0
+        },
+        {
+          "hour" : 0,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 1,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 2,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 3,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 4,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 5,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 6,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 7,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 8,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 9,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 10,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 11,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 12,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 13,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 14,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 15,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 16,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 17,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 18,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 19,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 20,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 21,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 22,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 23,
+          "total_seconds" : 0,
+          "weekday" : 1
+        },
+        {
+          "hour" : 0,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 1,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 2,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 3,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 4,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 5,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 6,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 7,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 8,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 9,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 10,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 11,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 12,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 13,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 14,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 15,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 16,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 17,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 18,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 19,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 20,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 21,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 22,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 23,
+          "total_seconds" : 0,
+          "weekday" : 2
+        },
+        {
+          "hour" : 0,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 1,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 2,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 3,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 4,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 5,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 6,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 7,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 8,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 9,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 10,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 11,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 12,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 13,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 14,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 15,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 16,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 17,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 18,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 19,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 20,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 21,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 22,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 23,
+          "total_seconds" : 0,
+          "weekday" : 3
+        },
+        {
+          "hour" : 0,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 1,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 2,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 3,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 4,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 5,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 6,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 7,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 8,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 9,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 10,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 11,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 12,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 13,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 14,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 15,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 16,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 17,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 18,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 19,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 20,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 21,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 22,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 23,
+          "total_seconds" : 0,
+          "weekday" : 4
+        },
+        {
+          "hour" : 0,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 1,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 2,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 3,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 4,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 5,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 6,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 7,
+          "total_seconds" : 528.74400000000003,
+          "weekday" : 5
+        },
+        {
+          "hour" : 8,
+          "total_seconds" : 4168.674,
+          "weekday" : 5
+        },
+        {
+          "hour" : 9,
+          "total_seconds" : 754.11900000000003,
+          "weekday" : 5
+        },
+        {
+          "hour" : 10,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 11,
+          "total_seconds" : 1905.0429999999999,
+          "weekday" : 5
+        },
+        {
+          "hour" : 12,
+          "total_seconds" : 3561.9490000000001,
+          "weekday" : 5
+        },
+        {
+          "hour" : 13,
+          "total_seconds" : 3522.1669999999999,
+          "weekday" : 5
+        },
+        {
+          "hour" : 14,
+          "total_seconds" : 617.16099999999994,
+          "weekday" : 5
+        },
+        {
+          "hour" : 15,
+          "total_seconds" : 34.738,
+          "weekday" : 5
+        },
+        {
+          "hour" : 16,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 17,
+          "total_seconds" : 2094.4740000000002,
+          "weekday" : 5
+        },
+        {
+          "hour" : 18,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 19,
+          "total_seconds" : 0,
+          "weekday" : 5
+        },
+        {
+          "hour" : 20,
+          "total_seconds" : 3247.3389999999999,
+          "weekday" : 5
+        },
+        {
+          "hour" : 21,
+          "total_seconds" : 3533.5610000000001,
+          "weekday" : 5
+        },
+        {
+          "hour" : 22,
+          "total_seconds" : 3202.2959999999998,
+          "weekday" : 5
+        },
+        {
+          "hour" : 23,
+          "total_seconds" : 3408.7260000000001,
+          "weekday" : 5
+        },
+        {
+          "hour" : 0,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 1,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 2,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 3,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 4,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 5,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 6,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 7,
+          "total_seconds" : 4074.9920000000002,
+          "weekday" : 6
+        },
+        {
+          "hour" : 8,
+          "total_seconds" : 2460.248,
+          "weekday" : 6
+        },
+        {
+          "hour" : 9,
+          "total_seconds" : 2514.6990000000001,
+          "weekday" : 6
+        },
+        {
+          "hour" : 10,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 11,
+          "total_seconds" : 4462.0450000000001,
+          "weekday" : 6
+        },
+        {
+          "hour" : 12,
+          "total_seconds" : 3883.1709999999998,
+          "weekday" : 6
+        },
+        {
+          "hour" : 13,
+          "total_seconds" : 6073.6369999999997,
+          "weekday" : 6
+        },
+        {
+          "hour" : 14,
+          "total_seconds" : 3049.0799999999999,
+          "weekday" : 6
+        },
+        {
+          "hour" : 15,
+          "total_seconds" : 1836.0239999999999,
+          "weekday" : 6
+        },
+        {
+          "hour" : 16,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 17,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 18,
+          "total_seconds" : 0,
+          "weekday" : 6
+        },
+        {
+          "hour" : 19,
+          "total_seconds" : 4457.5069999999996,
+          "weekday" : 6
+        },
+        {
+          "hour" : 20,
+          "total_seconds" : 4120.5200000000004,
+          "weekday" : 6
+        },
+        {
+          "hour" : 21,
+          "total_seconds" : 5083.4070000000002,
+          "weekday" : 6
+        },
+        {
+          "hour" : 22,
+          "total_seconds" : 299.22199999999998,
+          "weekday" : 6
+        },
+        {
+          "hour" : 23,
+          "total_seconds" : 0,
+          "weekday" : 6
+        }
+      ],
+      "display_name" : "Heatmap",
+      "name" : "heatmap"
+    }
+  ],
+  "title" : "time.md Combined Export"
+}
