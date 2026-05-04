@@ -1,10 +1,10 @@
 {
   "dateRange" : {
-    "durationSeconds" : 892026.9961075783,
+    "durationSeconds" : 937822.5110330582,
     "earliest" : "2026-04-22T19:13:06.003Z",
-    "latest" : "2026-05-03T03:00:12.999Z"
+    "latest" : "2026-05-03T15:43:28.514Z"
   },
-  "exportDate" : "2026-05-03T12:58:30.429Z",
+  "exportDate" : "2026-05-03T15:48:39.521Z",
   "points" : [
     {
       "altitude" : 177.42879304422692,
@@ -76011,81 +76011,1537 @@
       "speed" : 0,
       "timestamp" : "2026-05-03T03:00:12.999Z",
       "timestampUnix" : 1777777212.9994206
+    },
+    {
+      "altitude" : 173.48970025733686,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T12:58:31.436Z",
+      "timestampUnix" : 1777813111.4360418
+    },
+    {
+      "altitude" : 173.52389138892866,
+      "horizontalAccuracy" : 21.432734156289847,
+      "isOutlier" : false,
+      "latitude" : 18.327657797565585,
+      "longitude" : -67.2208404035762,
+      "timestamp" : "2026-05-03T12:58:49.447Z",
+      "timestampUnix" : 1777813129.44741
+    },
+    {
+      "altitude" : 174.57996719360352,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T12:59:00.493Z",
+      "timestampUnix" : 1777813140.4931889
+    },
+    {
+      "altitude" : 175.67905391201958,
+      "horizontalAccuracy" : 18.465377237791913,
+      "isOutlier" : false,
+      "latitude" : 18.327454450686204,
+      "longitude" : -67.22080197662667,
+      "timestamp" : "2026-05-03T13:04:31.482Z",
+      "timestampUnix" : 1777813471.4822874
+    },
+    {
+      "altitude" : 173.80209868014023,
+      "horizontalAccuracy" : 25.594415935835062,
+      "isOutlier" : false,
+      "latitude" : 18.327599198438364,
+      "longitude" : -67.2208288786445,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T13:04:36.234Z",
+      "timestampUnix" : 1777813476.233971
+    },
+    {
+      "altitude" : 172.37234778422862,
+      "horizontalAccuracy" : 17.12122187339068,
+      "isOutlier" : false,
+      "latitude" : 18.327445499913317,
+      "longitude" : -67.22079352568525,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T13:04:38.485Z",
+      "timestampUnix" : 1777813478.4847777
+    },
+    {
+      "altitude" : 172.2435807714915,
+      "horizontalAccuracy" : 14.637358248813761,
+      "isOutlier" : false,
+      "latitude" : 18.327493461830052,
+      "longitude" : -67.2207981156012,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T13:04:39.485Z",
+      "timestampUnix" : 1777813479.4847784
+    },
+    {
+      "altitude" : 171.47527540381998,
+      "horizontalAccuracy" : 11.804242010444725,
+      "isOutlier" : false,
+      "latitude" : 18.32745243886049,
+      "longitude" : -67.22075189388353,
+      "speed" : 2.3352808952329975,
+      "timestamp" : "2026-05-03T13:04:44.491Z",
+      "timestampUnix" : 1777813484.4909244
+    },
+    {
+      "altitude" : 170.79701179917902,
+      "horizontalAccuracy" : 9.926804677910573,
+      "isOutlier" : false,
+      "latitude" : 18.327426319474288,
+      "longitude" : -67.22071102969768,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T13:04:48.496Z",
+      "timestampUnix" : 1777813488.4959164
+    },
+    {
+      "altitude" : 171.4343456770008,
+      "horizontalAccuracy" : 8.420491650287914,
+      "isOutlier" : false,
+      "latitude" : 18.327399523039368,
+      "longitude" : -67.22066713745316,
+      "speed" : 1.887534260749817,
+      "timestamp" : "2026-05-03T13:04:57.503Z",
+      "timestampUnix" : 1777813497.5029626
+    },
+    {
+      "altitude" : 172.4883094439283,
+      "horizontalAccuracy" : 8.08690830923918,
+      "isOutlier" : false,
+      "latitude" : 18.327368739927216,
+      "longitude" : -67.22074359361862,
+      "speed" : 2.675439525159524,
+      "timestamp" : "2026-05-03T13:05:21.999Z",
+      "timestampUnix" : 1777813521.9988816
+    },
+    {
+      "altitude" : 174.25250197853893,
+      "horizontalAccuracy" : 8.427533544752963,
+      "isOutlier" : false,
+      "latitude" : 18.327383380203678,
+      "longitude" : -67.22080861692748,
+      "speed" : 4.245017458858676,
+      "timestamp" : "2026-05-03T13:05:23.999Z",
+      "timestampUnix" : 1777813523.9990911
+    },
+    {
+      "altitude" : 175.6667881803587,
+      "horizontalAccuracy" : 8.74955418768593,
+      "isOutlier" : false,
+      "latitude" : 18.32738971024396,
+      "longitude" : -67.22086772741788,
+      "speed" : 4.924421244636108,
+      "timestamp" : "2026-05-03T13:05:25.999Z",
+      "timestampUnix" : 1777813525.9992747
+    },
+    {
+      "altitude" : 176.26629648078233,
+      "horizontalAccuracy" : 9.50513831538454,
+      "isOutlier" : false,
+      "latitude" : 18.327416157941144,
+      "longitude" : -67.2209510471976,
+      "speed" : 4.348915919056967,
+      "timestamp" : "2026-05-03T13:05:27.999Z",
+      "timestampUnix" : 1777813527.9994335
+    },
+    {
+      "altitude" : 176.6823345758021,
+      "horizontalAccuracy" : 10.424588088017666,
+      "isOutlier" : false,
+      "latitude" : 18.32744305553042,
+      "longitude" : -67.22100592179304,
+      "speed" : 2.824842241983376,
+      "timestamp" : "2026-05-03T13:05:30.000Z",
+      "timestampUnix" : 1777813529.9995718
+    },
+    {
+      "altitude" : 176.35221810732037,
+      "horizontalAccuracy" : 10.486199878680699,
+      "isOutlier" : false,
+      "latitude" : 18.32744926651637,
+      "longitude" : -67.22106845958741,
+      "speed" : 2.301839931339413,
+      "timestamp" : "2026-05-03T13:05:33.000Z",
+      "timestampUnix" : 1777813532.9997463
+    },
+    {
+      "altitude" : 175.3486995920539,
+      "horizontalAccuracy" : 32.58689118523765,
+      "isOutlier" : false,
+      "latitude" : 18.327374873839183,
+      "longitude" : -67.22091582498777,
+      "speed" : 0.21200186939772533,
+      "timestamp" : "2026-05-03T13:05:41.000Z",
+      "timestampUnix" : 1777813541.0000622
+    },
+    {
+      "altitude" : 174.96739401482046,
+      "horizontalAccuracy" : 32.06343027888308,
+      "isOutlier" : false,
+      "latitude" : 18.327337590540115,
+      "longitude" : -67.22087311073614,
+      "speed" : 0.6276340993754114,
+      "timestamp" : "2026-05-03T13:05:42.000Z",
+      "timestampUnix" : 1777813542.0000906
+    },
+    {
+      "altitude" : 174.70747418515384,
+      "horizontalAccuracy" : 24.26495371277583,
+      "isOutlier" : false,
+      "latitude" : 18.327331685460155,
+      "longitude" : -67.2208656726612,
+      "speed" : 0.16445807858906078,
+      "timestamp" : "2026-05-03T13:05:43.000Z",
+      "timestampUnix" : 1777813543.0001163
+    },
+    {
+      "altitude" : 174.0768481856212,
+      "horizontalAccuracy" : 18.49152253372533,
+      "isOutlier" : false,
+      "latitude" : 18.327335929652957,
+      "longitude" : -67.22084764057033,
+      "speed" : 0.38841067890064734,
+      "timestamp" : "2026-05-03T13:05:45.000Z",
+      "timestampUnix" : 1777813545.0001621
+    },
+    {
+      "altitude" : 173.5475619053468,
+      "horizontalAccuracy" : 15.958073944779157,
+      "isOutlier" : false,
+      "latitude" : 18.32738576582006,
+      "longitude" : -67.22083253044322,
+      "speed" : 0.8105002582133245,
+      "timestamp" : "2026-05-03T13:05:47.000Z",
+      "timestampUnix" : 1777813547.0002007
+    },
+    {
+      "altitude" : 173.1995309041813,
+      "horizontalAccuracy" : 20.03804437678844,
+      "isOutlier" : false,
+      "latitude" : 18.327345275759757,
+      "longitude" : -67.22080958530704,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T13:05:51.000Z",
+      "timestampUnix" : 1777813551.0002599
+    },
+    {
+      "altitude" : 173.65449431189165,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T13:05:55.072Z",
+      "timestampUnix" : 1777813555.071579
+    },
+    {
+      "altitude" : 174.58000534057618,
+      "horizontalAccuracy" : 25.05286838385208,
+      "isOutlier" : false,
+      "latitude" : 18.327653150239954,
+      "longitude" : -67.22083915887436,
+      "timestamp" : "2026-05-03T13:07:07.029Z",
+      "timestampUnix" : 1777813627.0285912
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 17.948892750669643,
+      "isOutlier" : false,
+      "latitude" : 18.327653268685783,
+      "longitude" : -67.22083779601085,
+      "timestamp" : "2026-05-03T13:09:26.007Z",
+      "timestampUnix" : 1777813766.00694
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 12.33485886276898,
+      "isOutlier" : false,
+      "latitude" : 18.327653206153226,
+      "longitude" : -67.22083851545214,
+      "timestamp" : "2026-05-03T13:12:21.009Z",
+      "timestampUnix" : 1777813941.0090852
+    },
+    {
+      "altitude" : 173.73854685120392,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T13:16:03.273Z",
+      "timestampUnix" : 1777814163.2725592
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 25.18733550044391,
+      "isOutlier" : false,
+      "latitude" : 18.327653228072595,
+      "longitude" : -67.22083835229381,
+      "timestamp" : "2026-05-03T13:16:37.018Z",
+      "timestampUnix" : 1777814197.017614
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : true,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T13:16:37.560Z",
+      "timestampUnix" : 1777814197.56045
+    },
+    {
+      "altitude" : 196.3908476751145,
+      "horizontalAccuracy" : 42.83974357885195,
+      "isOutlier" : false,
+      "latitude" : 18.32725465805884,
+      "longitude" : -67.22084797586874,
+      "speed" : 1.4129890203475952,
+      "timestamp" : "2026-05-03T13:16:38.997Z",
+      "timestampUnix" : 1777814198.996862
+    },
+    {
+      "altitude" : 174.01407189201564,
+      "horizontalAccuracy" : 36.0666807732214,
+      "isOutlier" : false,
+      "latitude" : 18.32726644854618,
+      "longitude" : -67.22081101924584,
+      "speed" : 1.480148196220358,
+      "timestamp" : "2026-05-03T13:16:40.997Z",
+      "timestampUnix" : 1777814200.996851
+    },
+    {
+      "altitude" : 174.63566359784454,
+      "horizontalAccuracy" : 35.10468263109239,
+      "isOutlier" : false,
+      "latitude" : 18.327321280778232,
+      "longitude" : -67.2207458360249,
+      "speed" : 1.676091194152774,
+      "timestamp" : "2026-05-03T13:16:42.997Z",
+      "timestampUnix" : 1777814202.9968393
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 34.729355452773895,
+      "isOutlier" : true,
+      "latitude" : 18.327276607746757,
+      "longitude" : -67.22085358114248,
+      "speed" : 1.676091194152774,
+      "timestamp" : "2026-05-03T13:16:43.072Z",
+      "timestampUnix" : 1777814203.071826
+    },
+    {
+      "altitude" : 173.79997897055,
+      "horizontalAccuracy" : 34.6989006829709,
+      "isOutlier" : false,
+      "latitude" : 18.327323731839208,
+      "longitude" : -67.22080223006716,
+      "speed" : 1.962224960327054,
+      "timestamp" : "2026-05-03T13:16:45.003Z",
+      "timestampUnix" : 1777814205.0031118
+    },
+    {
+      "altitude" : 174.58000534057618,
+      "horizontalAccuracy" : 33.98146567798983,
+      "isOutlier" : false,
+      "latitude" : 18.32733053279206,
+      "longitude" : -67.22091997791246,
+      "speed" : 1.7107356786727288,
+      "timestamp" : "2026-05-03T13:16:49.064Z",
+      "timestampUnix" : 1777814209.064223
+    },
+    {
+      "altitude" : 170.25656523369253,
+      "horizontalAccuracy" : 33.91444442244594,
+      "isOutlier" : false,
+      "latitude" : 18.327305667503804,
+      "longitude" : -67.22096742303292,
+      "speed" : 1.962666630744841,
+      "timestamp" : "2026-05-03T13:16:55.002Z",
+      "timestampUnix" : 1777814215.0017295
+    },
+    {
+      "altitude" : 174.58000534057618,
+      "horizontalAccuracy" : 31.14348105939048,
+      "isOutlier" : true,
+      "latitude" : 18.32734423365915,
+      "longitude" : -67.22104534091235,
+      "speed" : 1.962666630744841,
+      "timestamp" : "2026-05-03T13:16:55.062Z",
+      "timestampUnix" : 1777814215.062479
+    },
+    {
+      "altitude" : 169.58579528611153,
+      "horizontalAccuracy" : 31.096945831059703,
+      "isOutlier" : false,
+      "latitude" : 18.3273273179787,
+      "longitude" : -67.22111007821412,
+      "speed" : 1.4070261716842307,
+      "timestamp" : "2026-05-03T13:16:59.001Z",
+      "timestampUnix" : 1777814219.0013142
+    },
+    {
+      "altitude" : 170.28423549514264,
+      "horizontalAccuracy" : 17.311795377740015,
+      "isOutlier" : false,
+      "latitude" : 18.327352873541244,
+      "longitude" : -67.22062083607207,
+      "speed" : 2.8703424686790053,
+      "timestamp" : "2026-05-03T13:17:02.001Z",
+      "timestampUnix" : 1777814222.0010567
+    },
+    {
+      "altitude" : 170.80474906787276,
+      "horizontalAccuracy" : 19.19189438039096,
+      "isOutlier" : false,
+      "latitude" : 18.327354436333632,
+      "longitude" : -67.22067451454492,
+      "speed" : 0.24672954442545766,
+      "timestamp" : "2026-05-03T13:17:07.001Z",
+      "timestampUnix" : 1777814227.0007153
+    },
+    {
+      "altitude" : 170.92730021383613,
+      "horizontalAccuracy" : 8.37172733345339,
+      "isOutlier" : false,
+      "latitude" : 18.32737687644392,
+      "longitude" : -67.22068603633156,
+      "speed" : 0.7385745469282219,
+      "timestamp" : "2026-05-03T13:17:11.001Z",
+      "timestampUnix" : 1777814231.0005028
+    },
+    {
+      "altitude" : 171.5352456830442,
+      "horizontalAccuracy" : 19.31811306031902,
+      "isOutlier" : false,
+      "latitude" : 18.327321260142867,
+      "longitude" : -67.22080190731276,
+      "speed" : 4.235589935532856,
+      "timestamp" : "2026-05-03T13:17:21.000Z",
+      "timestampUnix" : 1777814241.0001278
+    },
+    {
+      "altitude" : 172.39371211919934,
+      "horizontalAccuracy" : 19.980218046054897,
+      "isOutlier" : false,
+      "latitude" : 18.327365946733998,
+      "longitude" : -67.22087642498802,
+      "speed" : 4.687810998502944,
+      "timestamp" : "2026-05-03T13:17:23.000Z",
+      "timestampUnix" : 1777814243.0000725
+    },
+    {
+      "altitude" : 173.18046701606363,
+      "horizontalAccuracy" : 22.487077410494557,
+      "isOutlier" : false,
+      "latitude" : 18.327340701071233,
+      "longitude" : -67.22096407618442,
+      "speed" : 4.623065418396984,
+      "timestamp" : "2026-05-03T13:17:25.000Z",
+      "timestampUnix" : 1777814245.000021
+    },
+    {
+      "altitude" : 174.09522941987962,
+      "horizontalAccuracy" : 22.950749560404812,
+      "isOutlier" : false,
+      "latitude" : 18.327332970836526,
+      "longitude" : -67.22102016219489,
+      "speed" : 4.557282457774109,
+      "timestamp" : "2026-05-03T13:17:27.000Z",
+      "timestampUnix" : 1777814246.9999743
+    },
+    {
+      "altitude" : 174.99106647167355,
+      "horizontalAccuracy" : 23.427164853789197,
+      "isOutlier" : false,
+      "latitude" : 18.327334492706065,
+      "longitude" : -67.22110453217888,
+      "speed" : 4.890894277649645,
+      "timestamp" : "2026-05-03T13:17:29.000Z",
+      "timestampUnix" : 1777814248.9999306
+    },
+    {
+      "altitude" : 175.86264847032726,
+      "horizontalAccuracy" : 25.062624621009352,
+      "isOutlier" : false,
+      "latitude" : 18.327335202816787,
+      "longitude" : -67.22117526715554,
+      "speed" : 4.982362165771,
+      "timestamp" : "2026-05-03T13:17:31.000Z",
+      "timestampUnix" : 1777814250.9998903
+    },
+    {
+      "altitude" : 176.20209756027907,
+      "horizontalAccuracy" : 28.35966410346474,
+      "isOutlier" : false,
+      "latitude" : 18.327326305213372,
+      "longitude" : -67.2212378533125,
+      "speed" : 4.2475709107700865,
+      "timestamp" : "2026-05-03T13:17:34.000Z",
+      "timestampUnix" : 1777814253.9998345
+    },
+    {
+      "altitude" : 176.25505983736366,
+      "horizontalAccuracy" : 31.878915034774067,
+      "isOutlier" : false,
+      "latitude" : 18.327334786890216,
+      "longitude" : -67.2212858421534,
+      "speed" : 4.152331868338373,
+      "timestamp" : "2026-05-03T13:17:36.000Z",
+      "timestampUnix" : 1777814255.9998002
+    },
+    {
+      "altitude" : 176.26458606868982,
+      "horizontalAccuracy" : 33.38194722749871,
+      "isOutlier" : false,
+      "latitude" : 18.327341048440072,
+      "longitude" : -67.22123080017742,
+      "speed" : 2.3825882350097447,
+      "timestamp" : "2026-05-03T13:17:37.000Z",
+      "timestampUnix" : 1777814256.999785
+    },
+    {
+      "altitude" : 176.31323131918907,
+      "horizontalAccuracy" : 32.54655104872421,
+      "isOutlier" : false,
+      "latitude" : 18.327344253262343,
+      "longitude" : -67.22117499933144,
+      "speed" : 1.1400886730267827,
+      "timestamp" : "2026-05-03T13:17:38.000Z",
+      "timestampUnix" : 1777814257.999768
+    },
+    {
+      "altitude" : 176.35667501203716,
+      "horizontalAccuracy" : 36.99893063936069,
+      "isOutlier" : false,
+      "latitude" : 18.327364944030215,
+      "longitude" : -67.22108083088185,
+      "speed" : 1.2415835547218237,
+      "timestamp" : "2026-05-03T13:17:39.000Z",
+      "timestampUnix" : 1777814258.9997525
+    },
+    {
+      "altitude" : 176.30367504339665,
+      "horizontalAccuracy" : 41.14429461387131,
+      "isOutlier" : false,
+      "latitude" : 18.327366373474586,
+      "longitude" : -67.22097207087978,
+      "speed" : 0.6834872024195222,
+      "timestamp" : "2026-05-03T13:17:41.000Z",
+      "timestampUnix" : 1777814260.999723
+    },
+    {
+      "altitude" : 176.13431803137064,
+      "horizontalAccuracy" : 42.35548653143535,
+      "isOutlier" : false,
+      "latitude" : 18.32739663785041,
+      "longitude" : -67.22083387576606,
+      "speed" : 1.5638498313381204,
+      "timestamp" : "2026-05-03T13:17:42.000Z",
+      "timestampUnix" : 1777814261.9997091
+    },
+    {
+      "altitude" : 175.94545320793986,
+      "horizontalAccuracy" : 41.39545959700286,
+      "isOutlier" : false,
+      "latitude" : 18.327438183689306,
+      "longitude" : -67.22070223401859,
+      "speed" : 3.028587571904641,
+      "timestamp" : "2026-05-03T13:17:43.000Z",
+      "timestampUnix" : 1777814262.9996948
+    },
+    {
+      "altitude" : 175.77141657099128,
+      "horizontalAccuracy" : 40.58086745335611,
+      "isOutlier" : false,
+      "latitude" : 18.327446804679905,
+      "longitude" : -67.22064505174647,
+      "speed" : 3.2096996850238395,
+      "timestamp" : "2026-05-03T13:17:44.000Z",
+      "timestampUnix" : 1777814263.999682
+    },
+    {
+      "altitude" : 175.35363890230656,
+      "horizontalAccuracy" : 32.49730561701855,
+      "isOutlier" : false,
+      "latitude" : 18.32746843612286,
+      "longitude" : -67.22063593876871,
+      "speed" : 2.886711881015037,
+      "timestamp" : "2026-05-03T13:17:46.000Z",
+      "timestampUnix" : 1777814265.999656
+    },
+    {
+      "altitude" : 174.75530932843685,
+      "horizontalAccuracy" : 32.76246607581746,
+      "isOutlier" : false,
+      "latitude" : 18.327513733711793,
+      "longitude" : -67.22055785422542,
+      "speed" : 4.086073392694318,
+      "timestamp" : "2026-05-03T13:17:48.000Z",
+      "timestampUnix" : 1777814267.9996302
+    },
+    {
+      "altitude" : 174.02325075585395,
+      "horizontalAccuracy" : 26.231056646895944,
+      "isOutlier" : false,
+      "latitude" : 18.32748243983457,
+      "longitude" : -67.22062655889125,
+      "speed" : 2.71351756252382,
+      "timestamp" : "2026-05-03T13:17:50.000Z",
+      "timestampUnix" : 1777814269.9996066
+    },
+    {
+      "altitude" : 173.69737100973725,
+      "horizontalAccuracy" : 20.860455377075226,
+      "isOutlier" : false,
+      "latitude" : 18.32746205016061,
+      "longitude" : -67.22059297111764,
+      "speed" : 2.720544030725452,
+      "timestamp" : "2026-05-03T13:17:51.000Z",
+      "timestampUnix" : 1777814270.999594
+    },
+    {
+      "altitude" : 172.35166781395674,
+      "horizontalAccuracy" : 17.55771438478439,
+      "isOutlier" : false,
+      "latitude" : 18.327392349367443,
+      "longitude" : -67.22064292492024,
+      "speed" : 1.117998669504193,
+      "timestamp" : "2026-05-03T13:17:53.000Z",
+      "timestampUnix" : 1777814272.9995708
+    },
+    {
+      "altitude" : 171.18602691590786,
+      "horizontalAccuracy" : 15.268891852326904,
+      "isOutlier" : false,
+      "latitude" : 18.327375378593032,
+      "longitude" : -67.22057959978524,
+      "speed" : 1.4516289918278908,
+      "timestamp" : "2026-05-03T13:17:58.000Z",
+      "timestampUnix" : 1777814277.999517
+    },
+    {
+      "altitude" : 170.630514414981,
+      "horizontalAccuracy" : 16.854451977256232,
+      "isOutlier" : false,
+      "latitude" : 18.3274163286188,
+      "longitude" : -67.22053930632318,
+      "speed" : 1.8565305895414757,
+      "timestamp" : "2026-05-03T13:18:00.999Z",
+      "timestampUnix" : 1777814280.9994855
+    },
+    {
+      "altitude" : 170.46369066368788,
+      "horizontalAccuracy" : 18.582209216340548,
+      "isOutlier" : false,
+      "latitude" : 18.32737288532247,
+      "longitude" : -67.2206032090584,
+      "speed" : 0.6036903380737015,
+      "timestamp" : "2026-05-03T13:18:01.999Z",
+      "timestampUnix" : 1777814281.999476
+    },
+    {
+      "altitude" : 170.18841239158064,
+      "horizontalAccuracy" : 17.428318624436407,
+      "isOutlier" : false,
+      "latitude" : 18.327343061483262,
+      "longitude" : -67.22079991539579,
+      "speed" : 2.0183563659654995,
+      "timestamp" : "2026-05-03T13:18:02.999Z",
+      "timestampUnix" : 1777814282.9994655
+    },
+    {
+      "altitude" : 172.38461078889668,
+      "horizontalAccuracy" : 12.352198408074484,
+      "isOutlier" : false,
+      "latitude" : 18.32735823236789,
+      "longitude" : -67.22079252672464,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T13:18:06.999Z",
+      "timestampUnix" : 1777814286.999426
+    },
+    {
+      "altitude" : 172.97136076819152,
+      "horizontalAccuracy" : 19.35441662375711,
+      "isOutlier" : false,
+      "latitude" : 18.327392384258417,
+      "longitude" : -67.22086436265307,
+      "speed" : 2.291436658735058,
+      "timestamp" : "2026-05-03T13:18:09.999Z",
+      "timestampUnix" : 1777814289.9993956
+    },
+    {
+      "altitude" : 173.276666845195,
+      "horizontalAccuracy" : 23.891710173109967,
+      "isOutlier" : false,
+      "latitude" : 18.327405896460427,
+      "longitude" : -67.22091523475154,
+      "speed" : 2.712396925640925,
+      "timestamp" : "2026-05-03T13:18:11.999Z",
+      "timestampUnix" : 1777814291.999377
+    },
+    {
+      "altitude" : 173.84116745647043,
+      "horizontalAccuracy" : 27.431686812254732,
+      "isOutlier" : false,
+      "latitude" : 18.327336615199858,
+      "longitude" : -67.22087621276273,
+      "speed" : 1.7678123522290268,
+      "timestamp" : "2026-05-03T13:18:13.999Z",
+      "timestampUnix" : 1777814293.9993577
+    },
+    {
+      "altitude" : 174.86253972165287,
+      "horizontalAccuracy" : 30.547075361194075,
+      "isOutlier" : false,
+      "latitude" : 18.32739454747813,
+      "longitude" : -67.22081531077028,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T13:18:22.999Z",
+      "timestampUnix" : 1777814302.9992747
+    },
+    {
+      "altitude" : 174.19640380330384,
+      "horizontalAccuracy" : 38.80242224426075,
+      "isOutlier" : false,
+      "latitude" : 18.327290560870484,
+      "longitude" : -67.22074957679064,
+      "speed" : 1.1149752442436622,
+      "timestamp" : "2026-05-03T13:18:25.999Z",
+      "timestampUnix" : 1777814305.999247
+    },
+    {
+      "altitude" : 173.60403335187584,
+      "horizontalAccuracy" : 39.07827332186616,
+      "isOutlier" : false,
+      "latitude" : 18.327296325327616,
+      "longitude" : -67.22070056405983,
+      "speed" : 0.700605473010337,
+      "timestamp" : "2026-05-03T13:18:29.999Z",
+      "timestampUnix" : 1777814309.9992113
+    },
+    {
+      "altitude" : 173.3935477808118,
+      "horizontalAccuracy" : 37.15596554665429,
+      "isOutlier" : false,
+      "latitude" : 18.327260433892402,
+      "longitude" : -67.2206665123301,
+      "speed" : 1.2947738381148002,
+      "timestamp" : "2026-05-03T13:18:31.999Z",
+      "timestampUnix" : 1777814311.9991932
+    },
+    {
+      "altitude" : 173.43731673061848,
+      "horizontalAccuracy" : 38.89036593362055,
+      "isOutlier" : false,
+      "latitude" : 18.32721343620685,
+      "longitude" : -67.22066513711736,
+      "speed" : 1.4563390037332251,
+      "timestamp" : "2026-05-03T13:18:32.999Z",
+      "timestampUnix" : 1777814312.9991844
+    },
+    {
+      "altitude" : 173.51253344025463,
+      "horizontalAccuracy" : 46.59370692206451,
+      "isOutlier" : false,
+      "latitude" : 18.327129688611592,
+      "longitude" : -67.22062338123483,
+      "speed" : 2.8340419917397948,
+      "timestamp" : "2026-05-03T13:18:33.999Z",
+      "timestampUnix" : 1777814313.9991755
+    },
+    {
+      "altitude" : 174.58000534057618,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T13:18:58.069Z",
+      "timestampUnix" : 1777814338.068726
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 17.99889257969673,
+      "isOutlier" : false,
+      "latitude" : 18.32759655475769,
+      "longitude" : -67.22082085588511,
+      "timestamp" : "2026-05-03T13:20:34.005Z",
+      "timestampUnix" : 1777814434.0053449
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T13:23:25.465Z",
+      "timestampUnix" : 1777814605.4648762
+    },
+    {
+      "altitude" : 171.68338280078024,
+      "horizontalAccuracy" : 21.95213082215012,
+      "isOutlier" : false,
+      "latitude" : 18.32766373826526,
+      "longitude" : -67.22084792596735,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T13:23:46.011Z",
+      "timestampUnix" : 1777814626.0108607
+    },
+    {
+      "altitude" : 176.1042321456338,
+      "horizontalAccuracy" : 17.121067406675824,
+      "isOutlier" : false,
+      "latitude" : 18.327482876786743,
+      "longitude" : -67.22081348008298,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T13:23:46.760Z",
+      "timestampUnix" : 1777814626.759731
+    },
+    {
+      "altitude" : 170.8426572456956,
+      "horizontalAccuracy" : 12.114430333166858,
+      "isOutlier" : false,
+      "latitude" : 18.327548544049645,
+      "longitude" : -67.22084754501901,
+      "speed" : 0.24657997632160308,
+      "timestamp" : "2026-05-03T13:24:04.011Z",
+      "timestampUnix" : 1777814644.011273
+    },
+    {
+      "altitude" : 170.85573745891452,
+      "horizontalAccuracy" : 11.93951091692618,
+      "isOutlier" : false,
+      "latitude" : 18.32758521145949,
+      "longitude" : -67.22087573791838,
+      "speed" : 0.35834147092182445,
+      "timestamp" : "2026-05-03T13:24:08.011Z",
+      "timestampUnix" : 1777814648.0109653
+    },
+    {
+      "altitude" : 171.14169145189226,
+      "horizontalAccuracy" : 12.215244755216158,
+      "isOutlier" : false,
+      "latitude" : 18.32753892716204,
+      "longitude" : -67.22086559311504,
+      "speed" : 0.9794797721791272,
+      "timestamp" : "2026-05-03T13:24:12.011Z",
+      "timestampUnix" : 1777814652.010795
+    },
+    {
+      "altitude" : 171.59711828641593,
+      "horizontalAccuracy" : 14.324489693496597,
+      "isOutlier" : false,
+      "latitude" : 18.327497055138373,
+      "longitude" : -67.22084769428353,
+      "speed" : 0.7635835869266958,
+      "timestamp" : "2026-05-03T13:24:19.012Z",
+      "timestampUnix" : 1777814659.0122454
+    },
+    {
+      "altitude" : 172.57755746599287,
+      "horizontalAccuracy" : 9.603406885015547,
+      "isOutlier" : false,
+      "latitude" : 18.327458577612806,
+      "longitude" : -67.22081476181833,
+      "speed" : 0.10058868254746443,
+      "timestamp" : "2026-05-03T13:24:27.012Z",
+      "timestampUnix" : 1777814667.011717
+    },
+    {
+      "altitude" : 173.1823992272839,
+      "horizontalAccuracy" : 8.834280227904758,
+      "isOutlier" : false,
+      "latitude" : 18.327412470816007,
+      "longitude" : -67.22081617653666,
+      "speed" : 1.6327479253236878,
+      "timestamp" : "2026-05-03T13:24:34.013Z",
+      "timestampUnix" : 1777814674.0130935
+    },
+    {
+      "altitude" : 173.35361634287983,
+      "horizontalAccuracy" : 8.917374536910843,
+      "isOutlier" : false,
+      "latitude" : 18.32736778306249,
+      "longitude" : -67.22080793505242,
+      "speed" : 1.5110417299620218,
+      "timestamp" : "2026-05-03T13:24:39.012Z",
+      "timestampUnix" : 1777814679.0119982
+    },
+    {
+      "altitude" : 173.28538502939045,
+      "horizontalAccuracy" : 10.742240214576107,
+      "isOutlier" : false,
+      "latitude" : 18.32731916050986,
+      "longitude" : -67.22080320073462,
+      "speed" : 2.2760638715905643,
+      "timestamp" : "2026-05-03T13:24:42.013Z",
+      "timestampUnix" : 1777814682.0134
+    },
+    {
+      "altitude" : 173.4402091577649,
+      "horizontalAccuracy" : 6.811508452891331,
+      "isOutlier" : false,
+      "latitude" : 18.32736000880107,
+      "longitude" : -67.22078154888182,
+      "speed" : 0.4125106480541524,
+      "timestamp" : "2026-05-03T13:24:46.996Z",
+      "timestampUnix" : 1777814686.9959657
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T13:24:52.584Z",
+      "timestampUnix" : 1777814692.584104
+    },
+    {
+      "altitude" : 174.0246020433929,
+      "horizontalAccuracy" : 13.790917504879749,
+      "isOutlier" : false,
+      "latitude" : 18.327571286081657,
+      "longitude" : -67.22082307313663,
+      "timestamp" : "2026-05-03T13:25:38.585Z",
+      "timestampUnix" : 1777814738.585165
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 9.086863191691878,
+      "isOutlier" : false,
+      "latitude" : 18.32761807416169,
+      "longitude" : -67.22083226664134,
+      "timestamp" : "2026-05-03T13:26:59.626Z",
+      "timestampUnix" : 1777814819.625576
+    },
+    {
+      "altitude" : 175.27909737474403,
+      "horizontalAccuracy" : 4.082011712816682,
+      "isOutlier" : false,
+      "latitude" : 18.327648545145802,
+      "longitude" : -67.22083825884854,
+      "timestamp" : "2026-05-03T13:41:44.585Z",
+      "timestampUnix" : 1777815704.585289
+    },
+    {
+      "altitude" : 174.57998245239258,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:40:24.545Z",
+      "timestampUnix" : 1777819224.545234
+    },
+    {
+      "altitude" : 173.7463861385571,
+      "horizontalAccuracy" : 21.791941451113285,
+      "isOutlier" : false,
+      "latitude" : 18.327658248102207,
+      "longitude" : -67.22083529967361,
+      "timestamp" : "2026-05-03T14:40:27.531Z",
+      "timestampUnix" : 1777819227.531479
+    },
+    {
+      "altitude" : 174.554813079834,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:40:43.802Z",
+      "timestampUnix" : 1777819243.801609
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 24.975431400830082,
+      "isOutlier" : false,
+      "latitude" : 18.327660113349506,
+      "longitude" : -67.22083374990184,
+      "timestamp" : "2026-05-03T14:40:48.548Z",
+      "timestampUnix" : 1777819248.547865
+    },
+    {
+      "altitude" : 175.3017382421405,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:43:13.302Z",
+      "timestampUnix" : 1777819393.302016
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 19.673133355586263,
+      "isOutlier" : false,
+      "latitude" : 18.327657401308254,
+      "longitude" : -67.22083493238206,
+      "timestamp" : "2026-05-03T14:43:45.544Z",
+      "timestampUnix" : 1777819425.543709
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 14.28401011890135,
+      "isOutlier" : false,
+      "latitude" : 18.32765709934435,
+      "longitude" : -67.2208356414805,
+      "timestamp" : "2026-05-03T14:44:33.543Z",
+      "timestampUnix" : 1777819473.543161
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:45:54.541Z",
+      "timestampUnix" : 1777819554.5414472
+    },
+    {
+      "altitude" : 174.57998245239258,
+      "horizontalAccuracy" : 20.722176892502475,
+      "isOutlier" : false,
+      "latitude" : 18.327658896928355,
+      "longitude" : -67.22083981679651,
+      "timestamp" : "2026-05-03T14:46:16.540Z",
+      "timestampUnix" : 1777819576.539952
+    },
+    {
+      "altitude" : 174.57998245239258,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:46:22.542Z",
+      "timestampUnix" : 1777819582.542049
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 25.7865751949289,
+      "isOutlier" : false,
+      "latitude" : 18.327658954513144,
+      "longitude" : -67.220839949325,
+      "timestamp" : "2026-05-03T14:46:34.541Z",
+      "timestampUnix" : 1777819594.541208
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 17.791388057158247,
+      "isOutlier" : false,
+      "latitude" : 18.32765896178751,
+      "longitude" : -67.22083999234897,
+      "timestamp" : "2026-05-03T14:47:52.541Z",
+      "timestampUnix" : 1777819672.5411968
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:50:01.450Z",
+      "timestampUnix" : 1777819801.450182
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 26.55694530842431,
+      "isOutlier" : false,
+      "latitude" : 18.327660297028547,
+      "longitude" : -67.22083195107254,
+      "timestamp" : "2026-05-03T14:50:12.541Z",
+      "timestampUnix" : 1777819812.540843
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:50:18.541Z",
+      "timestampUnix" : 1777819818.541298
+    },
+    {
+      "altitude" : 174.26941100536928,
+      "horizontalAccuracy" : 20.95211282052533,
+      "isOutlier" : false,
+      "latitude" : 18.327659248407382,
+      "longitude" : -67.22083614859515,
+      "timestamp" : "2026-05-03T14:50:40.543Z",
+      "timestampUnix" : 1777819840.542793
+    },
+    {
+      "altitude" : 174.26941100536928,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : true,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:50:41.216Z",
+      "timestampUnix" : 1777819841.215982
+    },
+    {
+      "altitude" : 174.26941100536928,
+      "horizontalAccuracy" : 21.93924309278195,
+      "isOutlier" : false,
+      "latitude" : 18.32765924409344,
+      "longitude" : -67.22083618591786,
+      "timestamp" : "2026-05-03T14:50:47.224Z",
+      "timestampUnix" : 1777819847.223915
+    },
+    {
+      "altitude" : 174.57998245239258,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:50:52.542Z",
+      "timestampUnix" : 1777819852.541833
+    },
+    {
+      "altitude" : 174.57998245239258,
+      "horizontalAccuracy" : 25.22966763785267,
+      "isOutlier" : false,
+      "latitude" : 18.327658980731226,
+      "longitude" : -67.22083963900302,
+      "timestamp" : "2026-05-03T14:51:04.540Z",
+      "timestampUnix" : 1777819864.540076
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 19.37246578417137,
+      "isOutlier" : false,
+      "latitude" : 18.327658970757216,
+      "longitude" : -67.22083976977756,
+      "timestamp" : "2026-05-03T14:51:52.542Z",
+      "timestampUnix" : 1777819912.5417771
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 13.426355389682417,
+      "isOutlier" : false,
+      "latitude" : 18.327659040668102,
+      "longitude" : -67.22083880741496,
+      "timestamp" : "2026-05-03T14:54:28.542Z",
+      "timestampUnix" : 1777820068.5415149
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T14:54:59.540Z",
+      "timestampUnix" : 1777820099.540102
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 21.270362854408596,
+      "isOutlier" : false,
+      "latitude" : 18.32765920016383,
+      "longitude" : -67.22083717382993,
+      "timestamp" : "2026-05-03T14:57:45.540Z",
+      "timestampUnix" : 1777820265.53983
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 14.863622275301527,
+      "isOutlier" : false,
+      "latitude" : 18.32765682022331,
+      "longitude" : -67.22083500776584,
+      "timestamp" : "2026-05-03T15:02:45.532Z",
+      "timestampUnix" : 1777820565.5321112
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 9.423081690342256,
+      "isOutlier" : false,
+      "latitude" : 18.32765847707998,
+      "longitude" : -67.22083827377227,
+      "timestamp" : "2026-05-03T15:13:40.529Z",
+      "timestampUnix" : 1777821220.529433
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:28:51.522Z",
+      "timestampUnix" : 1777822131.5220861
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 24.414128421680957,
+      "isOutlier" : false,
+      "latitude" : 18.327663377604086,
+      "longitude" : -67.22084185413787,
+      "timestamp" : "2026-05-03T15:29:22.121Z",
+      "timestampUnix" : 1777822162.1212559
+    },
+    {
+      "altitude" : 175.29001862239187,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:29:24.523Z",
+      "timestampUnix" : 1777822164.52276
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 26.268981627602447,
+      "isOutlier" : false,
+      "latitude" : 18.32766011875955,
+      "longitude" : -67.22083612395264,
+      "timestamp" : "2026-05-03T15:29:51.522Z",
+      "timestampUnix" : 1777822191.521939
+    },
+    {
+      "altitude" : 173.49531924433504,
+      "horizontalAccuracy" : 20.086447620565078,
+      "isOutlier" : false,
+      "latitude" : 18.32765950280784,
+      "longitude" : -67.22083666687614,
+      "timestamp" : "2026-05-03T15:30:15.248Z",
+      "timestampUnix" : 1777822215.247555
+    },
+    {
+      "altitude" : 173.49821078486238,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:30:17.705Z",
+      "timestampUnix" : 1777822217.70514
+    },
+    {
+      "altitude" : 173.78673489650345,
+      "horizontalAccuracy" : 21.344817601609627,
+      "isOutlier" : false,
+      "latitude" : 18.32765914513585,
+      "longitude" : -67.22083755070224,
+      "timestamp" : "2026-05-03T15:30:25.256Z",
+      "timestampUnix" : 1777822225.256402
+    },
+    {
+      "altitude" : 174.57998245239258,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:30:26.523Z",
+      "timestampUnix" : 1777822226.522697
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 22.30558208983938,
+      "isOutlier" : false,
+      "latitude" : 18.32765896201587,
+      "longitude" : -67.2208398862947,
+      "timestamp" : "2026-05-03T15:30:31.264Z",
+      "timestampUnix" : 1777822231.2641392
+    },
+    {
+      "altitude" : 174.57998245239258,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:30:32.522Z",
+      "timestampUnix" : 1777822232.5222878
+    },
+    {
+      "altitude" : 174.57998245239258,
+      "horizontalAccuracy" : 19.903851003687738,
+      "isOutlier" : false,
+      "latitude" : 18.327658956685248,
+      "longitude" : -67.22083995428373,
+      "timestamp" : "2026-05-03T15:30:38.523Z",
+      "timestampUnix" : 1777822238.522756
+    },
+    {
+      "altitude" : 174.60846730219714,
+      "horizontalAccuracy" : 11.254290779758238,
+      "isOutlier" : false,
+      "latitude" : 18.327657735600777,
+      "longitude" : -67.22083963414451,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T15:31:02.470Z",
+      "timestampUnix" : 1777822262.46997
+    },
+    {
+      "altitude" : 173.73155291340876,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:32:33.030Z",
+      "timestampUnix" : 1777822353.0295901
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 24.425692743760663,
+      "isOutlier" : false,
+      "latitude" : 18.327654925454514,
+      "longitude" : -67.22083986213893,
+      "timestamp" : "2026-05-03T15:32:44.523Z",
+      "timestampUnix" : 1777822364.5228782
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:32:50.522Z",
+      "timestampUnix" : 1777822370.52162
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 24.480369840786746,
+      "isOutlier" : true,
+      "latitude" : 18.32765509459799,
+      "longitude" : -67.22083986636477,
+      "timestamp" : "2026-05-03T15:32:51.046Z",
+      "timestampUnix" : 1777822371.04599
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:32:57.053Z",
+      "timestampUnix" : 1777822377.053365
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 26.07061960404237,
+      "isOutlier" : false,
+      "latitude" : 18.32765890363398,
+      "longitude" : -67.22083996152712,
+      "timestamp" : "2026-05-03T15:33:02.519Z",
+      "timestampUnix" : 1777822382.518828
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 20.815674831574935,
+      "isOutlier" : false,
+      "latitude" : 18.327659059845352,
+      "longitude" : -67.22083797094866,
+      "timestamp" : "2026-05-03T15:33:44.519Z",
+      "timestampUnix" : 1777822424.518564
+    },
+    {
+      "altitude" : 174.7705699157715,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:34:08.794Z",
+      "timestampUnix" : 1777822448.794211
+    },
+    {
+      "altitude" : 175.1856405425674,
+      "horizontalAccuracy" : 17.343727028856442,
+      "isOutlier" : false,
+      "latitude" : 18.327467967331007,
+      "longitude" : -67.22080886898425,
+      "timestamp" : "2026-05-03T15:35:08.511Z",
+      "timestampUnix" : 1777822508.5114725
+    },
+    {
+      "altitude" : 175.4055057775478,
+      "horizontalAccuracy" : 37.62202801586192,
+      "isOutlier" : false,
+      "latitude" : 18.327533534311847,
+      "longitude" : -67.22080348675408,
+      "timestamp" : "2026-05-03T15:35:40.510Z",
+      "timestampUnix" : 1777822540.5103433
+    },
+    {
+      "altitude" : 175.385217808477,
+      "horizontalAccuracy" : 16.036325569625745,
+      "isOutlier" : false,
+      "latitude" : 18.32746880246809,
+      "longitude" : -67.2208038626421,
+      "timestamp" : "2026-05-03T15:35:41.510Z",
+      "timestampUnix" : 1777822541.5103297
+    },
+    {
+      "altitude" : 173.5105584716797,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:36:00.523Z",
+      "timestampUnix" : 1777822560.5231318
+    },
+    {
+      "altitude" : 175.63898631807717,
+      "horizontalAccuracy" : 15.294188998489862,
+      "isOutlier" : false,
+      "latitude" : 18.327481939152268,
+      "longitude" : -67.22080012201953,
+      "timestamp" : "2026-05-03T15:36:19.510Z",
+      "timestampUnix" : 1777822579.509812
+    },
+    {
+      "altitude" : 173.5105470275879,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:36:42.524Z",
+      "timestampUnix" : 1777822602.523859
+    },
+    {
+      "altitude" : 175.45703921884558,
+      "horizontalAccuracy" : 7.989824987672833,
+      "isOutlier" : false,
+      "latitude" : 18.327442812064277,
+      "longitude" : -67.2208034196985,
+      "timestamp" : "2026-05-03T15:37:06.509Z",
+      "timestampUnix" : 1777822626.5091722
+    },
+    {
+      "altitude" : 173.5105470275879,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:37:13.527Z",
+      "timestampUnix" : 1777822633.527108
+    },
+    {
+      "altitude" : 175.51851604165878,
+      "horizontalAccuracy" : 7.073740224284291,
+      "isOutlier" : false,
+      "latitude" : 18.327442362854736,
+      "longitude" : -67.22080359606743,
+      "timestamp" : "2026-05-03T15:38:52.508Z",
+      "timestampUnix" : 1777822732.5077267
+    },
+    {
+      "altitude" : 176.0814260885533,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:39:53.516Z",
+      "timestampUnix" : 1777822793.515769
+    },
+    {
+      "altitude" : 172.54143065959215,
+      "horizontalAccuracy" : 8.491052952374716,
+      "isOutlier" : false,
+      "latitude" : 18.327435596495228,
+      "longitude" : -67.22081078844928,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T15:40:11.519Z",
+      "timestampUnix" : 1777822811.518509
+    },
+    {
+      "altitude" : 173.5105470275879,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:40:33.520Z",
+      "timestampUnix" : 1777822833.51967
+    },
+    {
+      "altitude" : 172.83951804880053,
+      "horizontalAccuracy" : 5.877339910744062,
+      "isOutlier" : false,
+      "latitude" : 18.327430870050463,
+      "longitude" : -67.22083169779513,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T15:40:50.506Z",
+      "timestampUnix" : 1777822850.505833
+    },
+    {
+      "altitude" : 176.0814260885533,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:42:08.525Z",
+      "timestampUnix" : 1777822928.5246859
+    },
+    {
+      "altitude" : 172.5486706458032,
+      "horizontalAccuracy" : 6.2472183852720224,
+      "isOutlier" : false,
+      "latitude" : 18.32744351552966,
+      "longitude" : -67.22082306872443,
+      "speed" : 0,
+      "timestamp" : "2026-05-03T15:43:03.516Z",
+      "timestampUnix" : 1777822983.5155525
+    },
+    {
+      "altitude" : 175.28711269282408,
+      "horizontalAccuracy" : 6.443967680343261,
+      "isOutlier" : false,
+      "latitude" : 18.32742463274404,
+      "longitude" : -67.22075260398333,
+      "timestamp" : "2026-05-03T15:43:28.514Z",
+      "timestampUnix" : 1777823008.5143461
     }
   ],
-  "totalPoints" : 7630,
+  "totalPoints" : 7785,
   "totalVisits" : 18,
   "visits" : [
     {
-      "address" : "2407–2413 Avenida Vistamar, Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-27T13:53:15.000Z",
-      "latitude" : 18.32980839206686,
+      "address" : "Carretera el Coqui, Rincón, PR, 00677",
+      "arrivedAt" : "2026-05-02T23:00:41.999Z",
+      "latitude" : 18.327416566353392,
       "locationName" : "Puerto Rico",
-      "longitude" : -67.2483217341102
-    },
-    {
-      "address" : "2407–2413 Avenida Vistamar, Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-27T13:53:15.000Z",
-      "departedAt" : "2026-04-27T14:07:34.000Z",
-      "durationMinutes" : 14.3166723549366,
-      "latitude" : 18.329771816412965,
-      "locationName" : "Puerto Rico",
-      "longitude" : -67.24831589444345
+      "longitude" : -67.22083808431492
     },
     {
       "address" : "29–35 Carretera el Coqui, Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-27T14:15:23.000Z",
-      "latitude" : 18.327394595342096,
+      "arrivedAt" : "2026-05-01T20:36:32.829Z",
+      "latitude" : 18.327576967100132,
       "locationName" : "Puerto Rico",
-      "longitude" : -67.22092829139096
-    },
-    {
-      "address" : "Carretera el Coqui, Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-27T14:15:23.000Z",
-      "departedAt" : "2026-04-28T23:08:49.116Z",
-      "durationMinutes" : 1973.435259137551,
-      "latitude" : 18.327531364138615,
-      "locationName" : "Puerto Rico",
-      "longitude" : -67.220798370431
-    },
-    {
-      "address" : "Calle Marginal, Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-28T23:15:03.273Z",
-      "latitude" : 18.321086187750893,
-      "locationName" : "Puerto Rico",
-      "longitude" : -67.24200193955086
+      "longitude" : -67.2211030732704
     },
     {
       "address" : "Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-28T23:15:03.273Z",
-      "departedAt" : "2026-04-29T00:03:13.014Z",
-      "durationMinutes" : 48.1623471001784,
-      "latitude" : 18.320678016109536,
-      "locationName" : "00677",
-      "longitude" : -67.2418324719959
+      "arrivedAt" : "2026-05-01T20:08:36.250Z",
+      "latitude" : 18.33390530935926,
+      "locationName" : "Rincón Plaza",
+      "longitude" : -67.2496332729778
     },
     {
-      "address" : "PR-115, Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-29T00:04:20.956Z",
-      "latitude" : 18.32721631786296,
-      "locationName" : "Puerto Rico",
-      "longitude" : -67.24564740615648
-    },
-    {
-      "address" : "301–399 Avenida de la Pradera, Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-29T00:04:20.956Z",
-      "departedAt" : "2026-04-29T00:10:46.784Z",
-      "durationMinutes" : 6.430477390686671,
-      "latitude" : 18.32787639047574,
-      "locationName" : "Puerto Rico",
-      "longitude" : -67.24428515561334
+      "address" : "Rincón, PR, 00677",
+      "arrivedAt" : "2026-05-01T20:08:36.250Z",
+      "departedAt" : "2026-05-01T20:27:42.952Z",
+      "durationMinutes" : 19.111692118644715,
+      "latitude" : 18.333865249526106,
+      "locationName" : "Rincón Plaza",
+      "longitude" : -67.24980692424235
     },
     {
       "address" : "Carretera el Coqui, Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-29T00:16:49.000Z",
-      "latitude" : 18.32746064992239,
+      "arrivedAt" : "2026-05-01T15:22:14.379Z",
+      "latitude" : 18.327304036496106,
       "locationName" : "Puerto Rico",
-      "longitude" : -67.22066050820118
+      "longitude" : -67.22059602151656
+    },
+    {
+      "address" : "Carretera el Coqui, Rincón, PR, 00677",
+      "arrivedAt" : "2026-05-01T15:22:14.379Z",
+      "departedAt" : "2026-05-01T19:43:19.507Z",
+      "durationMinutes" : 261.08547781904537,
+      "latitude" : 18.327513487198548,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.22077469692768
+    },
+    {
+      "address" : "Carretera el Coqui, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-30T14:06:31.000Z",
+      "latitude" : 18.327441417052285,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.22082628555923
     },
     {
       "address" : "PR-115, Rincón, PR, 00677",
@@ -76105,56 +77561,74 @@
     },
     {
       "address" : "Carretera el Coqui, Rincón, PR, 00677",
-      "arrivedAt" : "2026-04-30T14:06:31.000Z",
-      "latitude" : 18.327441417052285,
+      "arrivedAt" : "2026-04-29T00:16:49.000Z",
+      "latitude" : 18.32746064992239,
       "locationName" : "Puerto Rico",
-      "longitude" : -67.22082628555923
+      "longitude" : -67.22066050820118
     },
     {
-      "address" : "Carretera el Coqui, Rincón, PR, 00677",
-      "arrivedAt" : "2026-05-01T15:22:14.379Z",
-      "latitude" : 18.327304036496106,
+      "address" : "PR-115, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-29T00:04:20.956Z",
+      "latitude" : 18.32721631786296,
       "locationName" : "Puerto Rico",
-      "longitude" : -67.22059602151656
+      "longitude" : -67.24564740615648
     },
     {
-      "address" : "Carretera el Coqui, Rincón, PR, 00677",
-      "arrivedAt" : "2026-05-01T15:22:14.379Z",
-      "departedAt" : "2026-05-01T19:43:19.507Z",
-      "durationMinutes" : 261.08547781904537,
-      "latitude" : 18.327513487198548,
+      "address" : "301–399 Avenida de la Pradera, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-29T00:04:20.956Z",
+      "departedAt" : "2026-04-29T00:10:46.784Z",
+      "durationMinutes" : 6.430477390686671,
+      "latitude" : 18.32787639047574,
       "locationName" : "Puerto Rico",
-      "longitude" : -67.22077469692768
+      "longitude" : -67.24428515561334
+    },
+    {
+      "address" : "Calle Marginal, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-28T23:15:03.273Z",
+      "latitude" : 18.321086187750893,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.24200193955086
     },
     {
       "address" : "Rincón, PR, 00677",
-      "arrivedAt" : "2026-05-01T20:08:36.250Z",
-      "latitude" : 18.33390530935926,
-      "locationName" : "Rincón Plaza",
-      "longitude" : -67.2496332729778
-    },
-    {
-      "address" : "Rincón, PR, 00677",
-      "arrivedAt" : "2026-05-01T20:08:36.250Z",
-      "departedAt" : "2026-05-01T20:27:42.952Z",
-      "durationMinutes" : 19.111692118644715,
-      "latitude" : 18.333865249526106,
-      "locationName" : "Rincón Plaza",
-      "longitude" : -67.24980692424235
+      "arrivedAt" : "2026-04-28T23:15:03.273Z",
+      "departedAt" : "2026-04-29T00:03:13.014Z",
+      "durationMinutes" : 48.1623471001784,
+      "latitude" : 18.320678016109536,
+      "locationName" : "00677",
+      "longitude" : -67.2418324719959
     },
     {
       "address" : "29–35 Carretera el Coqui, Rincón, PR, 00677",
-      "arrivedAt" : "2026-05-01T20:36:32.829Z",
-      "latitude" : 18.327576967100132,
+      "arrivedAt" : "2026-04-27T14:15:23.000Z",
+      "latitude" : 18.327394595342096,
       "locationName" : "Puerto Rico",
-      "longitude" : -67.2211030732704
+      "longitude" : -67.22092829139096
     },
     {
       "address" : "Carretera el Coqui, Rincón, PR, 00677",
-      "arrivedAt" : "2026-05-02T23:00:41.999Z",
-      "latitude" : 18.327416566353392,
+      "arrivedAt" : "2026-04-27T14:15:23.000Z",
+      "departedAt" : "2026-04-28T23:08:49.116Z",
+      "durationMinutes" : 1973.435259137551,
+      "latitude" : 18.327531364138615,
       "locationName" : "Puerto Rico",
-      "longitude" : -67.22083808431492
+      "longitude" : -67.220798370431
+    },
+    {
+      "address" : "2407–2413 Avenida Vistamar, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-27T13:53:15.000Z",
+      "latitude" : 18.32980839206686,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.2483217341102
+    },
+    {
+      "address" : "2407–2413 Avenida Vistamar, Rincón, PR, 00677",
+      "arrivedAt" : "2026-04-27T13:53:15.000Z",
+      "departedAt" : "2026-04-27T14:07:34.000Z",
+      "durationMinutes" : 14.3166723549366,
+      "latitude" : 18.329771816412965,
+      "locationName" : "Puerto Rico",
+      "longitude" : -67.24831589444345
     }
   ]
 }
